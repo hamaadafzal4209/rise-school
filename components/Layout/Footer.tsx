@@ -207,26 +207,6 @@ const Footer = () => {
               <p className="text-white/80 text-sm">
                 © {new Date().getFullYear()} RISE Premier. All rights reserved.
               </p>
-              <div className="flex space-x-6 text-sm text-white/80">
-                <a
-                  href="#"
-                  className="hover:text-white transition-colors duration-300"
-                >
-                  Privacy Policy
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-white transition-colors duration-300"
-                >
-                  Terms of Service
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-white transition-colors duration-300"
-                >
-                  Cookie Policy
-                </a>
-              </div>
             </div>
           </div>
         </motion.div>
