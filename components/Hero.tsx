@@ -4,20 +4,21 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      image: "/assets/hero-campus-1.jpg",
+      image: "/assets/events/building1.jpg",
       title: "Shaping Bright Futures",
       subtitle: "Excellence in Education, Innovation in Learning",
       description:
         "Join our community of learners and discover your potential in a nurturing academic environment.",
     },
     {
-      image: "/assets/hero-library.jpg",
+      image: "/assets/events/building3.jpg",
       title: "Where Knowledge Meets Innovation",
       subtitle: "Empowering Students for Tomorrow's World",
       description:
@@ -116,9 +117,7 @@ const Hero = () => {
               transition={{ delay: 1.1, duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <motion.div
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.div whileTap={{ scale: 0.95 }}>
                 <Button
                   size="lg"
                   className="bg-white text-black hover:bg-gray-100 transition-all shadow-lg font-semibold group"
@@ -128,16 +127,16 @@ const Hero = () => {
                 </Button>
               </motion.div>
 
-              <motion.div
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white bg-transparent hover:border-none text-white hover:text-white hover:bg-[#092f6e] backdrop-blur-sm font-semibold transition-all"
-                >
-                  Learn More
-                </Button>
+              <motion.div whileTap={{ scale: 0.95 }}>
+                <Link href="/about" passHref>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white bg-transparent hover:border-none text-white hover:text-white hover:bg-[#092f6e] backdrop-blur-sm font-semibold transition-all"
+                  >
+                    Learn More
+                  </Button>
+                </Link>
               </motion.div>
             </motion.div>
           </motion.div>

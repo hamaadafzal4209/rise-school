@@ -63,6 +63,7 @@ const AboutPage = () => {
         highlight="RISE Premier"
         description="Where brilliance meets purpose. Empowering the next generation with wisdom, integrity, and a spirit of excellence."
         breadcrumb="Home » About"
+        backgroundImage="/assets/events/building1.jpg"
       />
 
       <section ref={ref} className="py-20 bg-gradient-subtle">
@@ -194,7 +195,7 @@ const AboutPage = () => {
                         {stat.value}
                       </span>
                     </div>
-                    <span className="font-medium text-white">
+                    <span className="font-medium text-foreground">
                       {stat.label}
                     </span>
                   </div>
@@ -205,7 +206,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-background relative overflow-hidden">
+      <section className="pb-24 bg-background relative overflow-hidden">
         <div className="absolute inset-0 dotted-bg-light opacity-10" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div

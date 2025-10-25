@@ -30,58 +30,59 @@ const CampusLife = () => {
       value: students,
       suffix: "+",
       label: "Students Enrolled",
-      gradient: "from-blue-500 to-indigo-500",
+      gradient: "from-sky-500 via-indigo-500 to-blue-600",
     },
     {
       icon: BookOpen,
       value: courses,
       suffix: "+",
       label: "Courses Offered",
-      gradient: "from-emerald-500 to-teal-500",
+      gradient: "from-emerald-400 via-teal-500 to-green-600",
     },
     {
       icon: Trophy,
       value: clubs,
       suffix: "+",
       label: "Student Clubs",
-      gradient: "from-amber-500 to-orange-500",
+      gradient: "from-amber-400 via-orange-500 to-red-500",
     },
     {
       icon: Music,
       value: events,
       suffix: "+",
       label: "Annual Events",
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-fuchsia-400 via-purple-500 to-pink-500",
     },
   ];
 
   return (
-    <section id="campus" ref={ref} className="relative py-24 overflow-hidden">
+    <section ref={ref} className="relative py-24 overflow-hidden">
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${'/assets/campus-life.jpg'})` }}
+          style={{ backgroundImage: `url('/assets/events/study6.jpg')` }}
         />
-        <div className="absolute inset-0 gradient-hero" />
-        <div className="absolute inset-0 dotted-bg-light" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/70 via-gray-900/70 to-gray-800/80" />
       </div>
 
+      {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-12">
+        {/* Section Header */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="text-center mb-8"
+          className="text-center mb-16"
         >
-          <span className="inline-flex items-center bg-primary-foreground/20 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-medium mb-6 border border-primary-foreground/20 text-white shadow-subtle">
+          <span className="inline-flex items-center bg-white/10 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-medium mb-6 border border-white/20 text-white tracking-wide">
             Campus Experience
           </span>
-          <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-primary-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-white mb-6 drop-shadow-lg">
             Vibrant Campus Life
           </h2>
-          <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            A dynamic environment where learning extends beyond the classroom —
-            with diverse activities, student clubs, and community engagement.
+          <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            A dynamic environment where learning extends beyond the classroom — 
+            fostering leadership, creativity, and lifelong friendships.
           </p>
         </motion.div>
 
@@ -91,90 +92,63 @@ const CampusLife = () => {
           custom={0.3}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="max-w-7xl mx-auto text-center mb-20"
+          className="grid md:grid-cols-2 gap-10 mb-20"
         >
-          <p className="text-lg max-w-3xl mx-auto text-primary-foreground/80 leading-relaxed mb-12">
-            At RiseSchool Academy, campus life means exploration, leadership, and
-            lifelong friendships. Opportunities are endless — from cultural
-            events to academic challenges.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-10 text-left">
-            {[
-              {
-                title: "Student Organizations",
-                desc: "Join 45+ clubs across arts, sciences, sports, and service. Find your passion and your people.",
-              },
-              {
-                title: "Events & Activities",
-                desc: "From festivals to competitions, sports to outreach — campus is always alive with opportunities.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={item.title}
-                variants={fadeUp}
-                custom={0.5 + i * 0.2}
-                initial="hidden"
-                animate={isInView ? "visible" : "hidden"}
-                className="rounded-2xl p-8 bg-white/10 backdrop-blur-md border border-white/20 shadow-medium hover:shadow-glow transition-all"
-              >
-                <h3 className="text-2xl font-heading font-bold text-primary-foreground mb-4">
-                  {item.title}
-                </h3>
-                <p className="text-primary-foreground/80 leading-relaxed">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+          {[
+            {
+              title: "Student Organizations",
+              desc: "Join 45+ active clubs across arts, sciences, sports, and community service — where passion meets purpose.",
+            },
+            {
+              title: "Events & Activities",
+              desc: "Experience year-round energy with cultural festivals, debates, hackathons, and sports championships.",
+            },
+          ].map((item, i) => (
+            <motion.div
+              key={item.title}
+              variants={fadeUp}
+              custom={0.5 + i * 0.2}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              className="rounded-2xl p-8 bg-white/10 backdrop-blur-md border border-white/20 shadow-lg hover:shadow-2xl transition-all duration-300"
+            >
+              <h3 className="text-2xl font-bold text-white mb-4 drop-shadow">
+                {item.title}
+              </h3>
+              <p className="text-gray-200 leading-relaxed">{item.desc}</p>
+            </motion.div>
+          ))}
         </motion.div>
 
-        {/* Stats */}
+        {/* Stats Section */}
         <motion.div
           variants={fadeUp}
           custom={0.6}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 lg:grid-cols-4 gap-10"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10"
         >
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
               whileHover={{ y: -6, scale: 1.03 }}
               transition={{ type: "spring", stiffness: 200 }}
-              className="text-center rounded-2xl p-8 bg-white/10 backdrop-blur-md border border-white/20 shadow-medium hover:shadow-glow transition-all"
+              className="text-center rounded-2xl p-8 bg-white/10 backdrop-blur-md border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div
                 className={`w-16 h-16 mx-auto mb-6 rounded-full bg-linear-to-tr ${stat.gradient} flex items-center justify-center shadow-lg`}
               >
                 <stat.icon className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl md:text-5xl font-extrabold text-primary-foreground mb-3">
+              <div className="text-4xl md:text-5xl font-extrabold text-white mb-3 drop-shadow">
                 {stat.value.toLocaleString()}
                 {stat.suffix}
               </div>
-              <p className="text-primary-foreground/90 font-medium text-lg">
+              <p className="text-gray-200 font-medium text-lg">
                 {stat.label}
               </p>
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* CTA */}
-        <motion.div
-          variants={fadeUp}
-          custom={1}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="text-center mt-20"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="gradient-primary text-primary-foreground px-8 py-4 rounded-xl font-heading font-bold shadow-medium hover:shadow-large transition-shadow duration-300"
-          >
-            Explore Campus Life
-          </motion.button>
         </motion.div>
       </div>
     </section>

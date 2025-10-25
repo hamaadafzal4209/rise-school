@@ -19,18 +19,18 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Faculty", href: "#faculty" },
-    { name: "Campus Life", href: "#campus" },
-    { name: "Events", href: "#events" },
-    { name: "Admissions", href: "#admissions" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Campus Life", href: "/about" },
+    { name: "Faculty", href: "/faculty" },
+    { name: "Events", href: "/events" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const socialLinks = [
@@ -144,12 +144,12 @@ const Footer = () => {
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
                   >
-                    <a
+                    <Link
                       href={link.href}
                       className="flex items-center space-x-2 text-white/80 hover:text-white transition-all duration-300"
                     >
                       <span>{link.name}</span>
-                    </a>
+                    </Link>
                   </motion.li>
                 ))}
               </ul>

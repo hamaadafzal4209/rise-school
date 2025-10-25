@@ -151,7 +151,7 @@ const AboutSection = () => {
                       {stat.value}
                     </span>
                   </div>
-                  <span className="font-medium text-white">
+                  <span className="font-medium text-foreground">
                     {stat.label}
                   </span>
                 </div>
