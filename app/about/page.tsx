@@ -194,7 +194,7 @@ const AboutPage = () => {
                         {stat.value}
                       </span>
                     </div>
-                    <span className="font-medium text-foreground">
+                    <span className="font-medium text-white">
                       {stat.label}
                     </span>
                   </div>
