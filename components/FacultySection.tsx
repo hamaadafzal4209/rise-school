@@ -71,7 +71,7 @@ const FacultySection = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="gradient-primary text-primary-foreground px-8 py-4 rounded-xl font-heading font-bold shadow-medium hover:shadow-large transition-shadow duration-300"
+            className="gradient-primary text-white px-8 py-4 rounded-xl font-heading font-bold shadow-medium hover:shadow-large transition-shadow duration-300"
           >
             View All Faculty
           </motion.button>

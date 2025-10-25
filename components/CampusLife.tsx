@@ -57,7 +57,6 @@ const CampusLife = () => {
 
   return (
     <section id="campus" ref={ref} className="relative py-24 overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -68,7 +67,6 @@ const CampusLife = () => {
       </div>
 
       <div className="relative z-10 container mx-auto px-6 lg:px-12">
-        {/* Section Header */}
         <motion.div
           variants={fadeUp}
           initial="hidden"

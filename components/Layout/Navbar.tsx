@@ -52,8 +52,8 @@ const Navbar = () => {
                     whileHover={{ y: -2 }}
                     className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 cursor-pointer ${
                       isActive
-                        ? "gradient-primary text-primary-foreground shadow-md"
-                        : "text-foreground hover:text-primary hover:bg-muted/40"
+                        ? "gradient-primary text-white shadow-md"
+                        : "text-black"
                     }`}
                   >
                     <item.icon

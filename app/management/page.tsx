@@ -41,7 +41,7 @@ const ManagementPage = () => {
         description="The management team of RISE Premier leads with dedication and excellence, guiding our institution toward continuous growth and innovation."
         breadcrumb="Home » Management"
       />
-      <div className="container mx-auto pb-20 px-4">
+      <div className="container mx-auto py-20 px-4">
         <motion.div
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
