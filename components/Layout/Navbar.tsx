@@ -69,7 +69,6 @@ const Navbar = () => {
               );
             })}
 
-            {/* Enroll Now Button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button className="ml-4 gradient-primary shadow-medium">
                 Enroll Now
@@ -77,16 +76,14 @@ const Navbar = () => {
             </motion.div>
           </div>
 
-          {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg cursor-pointer hover:bg-muted transition-colors"
+            className="md:hidden p-2 rounded-lg cursor-pointer gradient-primary transition-colors"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
           </button>
         </div>
 
-        {/* Mobile Dropdown */}
         <motion.div
           initial={false}
           animate={{ height: isOpen ? "auto" : 0 }}
@@ -103,7 +100,7 @@ const Navbar = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}
                     transition={{ delay: index * 0.1 }}
-                    className={`flex items-center space-x-3 px-6 py-3 rounded-lg font-medium transition-colors ${
+                    className={`flex items-center space-x-3 px-6 py-3 mx-4 rounded-lg font-medium transition-colors ${
                       isActive
                         ? "gradient-primary text-primary-foreground shadow-md"
                         : "text-foreground hover:text-primary hover:bg-muted/40"

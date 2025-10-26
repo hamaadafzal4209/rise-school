@@ -1,16 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Award, BookOpen } from "lucide-react";
+import Image from "next/image";
 
 const FacultyCard = ({
   name,
   designation,
   image,
-  experience,
-  education,
-  email,
   delay = 0,
+  imageStyles,
+  backgroundStyle,
 }: any) => {
   return (
     <motion.div
@@ -21,20 +20,33 @@ const FacultyCard = ({
       className="group"
     >
       <div className="bg-card rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden border">
-        <div className="relative overflow-hidden">
-          <img
+        <div
+          className={`relative overflow-hidden flex items-center justify-center`}
+          style={{
+            background:
+              backgroundStyle ||
+              "radial-gradient(circle at center, #b3e5fc 0%, #e1f5fe 100%)",
+          }}
+        >
+          <Image
             src={image}
             alt={name}
-            className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+            width={500}
+            height={500}
+            className={`w-full h-64 ${
+              imageStyles ? imageStyles : "object-cover"
+            } group-hover:scale-110 transition-transform duration-500`}
           />
           <div className="absolute inset-0 bg-linear-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
 
-        <div className="p-4 pb-0">
+        <div className={`p-4 ${designation ? 'pb-0' : 'pb-2' }`}>
           <h3 className="text-xl font-heading font-bold text-foreground mb-2">
             {name}
           </h3>
-          <p className="text-primary font-medium mb-4">{designation}</p>
+          {designation && (
+            <p className="text-primary font-medium mb-4">{designation}</p>
+          )}
         </div>
       </div>
     </motion.div>
