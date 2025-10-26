@@ -36,11 +36,18 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-md shadow-md"
     >
       <div className="container mx-auto px-4">
-        {/* Navbar Content */}
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-2">
-            <img src="/assets/Rise-Logo.png" className="w-24" alt="RISE Premier" />
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center space-x-2"
+          >
+            <Link href="/">
+              <img
+                src="/assets/Rise-Logo.png"
+                className="w-24"
+                alt="RISE Premier"
+              />
+            </Link>
           </motion.div>
 
           <div className="hidden md:flex items-center space-x-1">
@@ -80,7 +87,11 @@ const Navbar = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 rounded-lg cursor-pointer gradient-primary transition-colors"
           >
-            {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
+            {isOpen ? (
+              <X className="w-6 h-6 text-white" />
+            ) : (
+              <Menu className="w-6 h-6 text-white" />
+            )}
           </button>
         </div>
 
@@ -95,7 +106,11 @@ const Navbar = () => {
             {navItems.map((item, index) => {
               const isActive = pathname === item.href;
               return (
-                <Link key={item.name} href={item.href} onClick={() => setIsOpen(false)}>
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                >
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}
