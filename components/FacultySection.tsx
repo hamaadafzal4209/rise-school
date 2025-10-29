@@ -12,19 +12,24 @@ const FacultySection = () => {
 
   const facultyMembers = [
     {
-      name: "Mr. Sajjad Ahmed Malik",
-      designation: "Principal & Head of Mathematics",
-      image: "/assets/faculty/Imran_Shahzad.png",
+      name: "Mr. Naveed Ansari",
+      designation: "Chief Executive Officer (CEO) & Faculty Member",
+      image: '/assets/management/management1.jpg'
+       },
+    {
+      name: "Mr. Tanveer Ansari",
+      designation: "Director Business Development",
+      image: '/assets/management/management2.jpg'
+    },
+    {
+        name: "Mr. Adnan Rasheed",
+        designation: "Director Operations & Faculty Member",
+        image: '/assets/management/management3.jpg'
     },
     {
       name: "Mr. Zahid Qavi",
-      designation: "Head of Science Department",
-      image: "/assets/faculty/Sajjad_Ahmad_Malik.png",
-    },
-    {
-      name: "Mr Umer Farooq",
-      designation: "English & Literature Teacher",
-      image: "/assets/faculty/Sir_Adnan_Rasheed.png",
+      designation: "Director Online Education & Faculty Member",
+      image: '/assets/management/management4.jpg'
     },
   ];
 
@@ -60,8 +65,6 @@ const FacultySection = () => {
               name={faculty.name}
               image={faculty.image}
               delay={i * 0.1}
-              imageStyles="object-contain"
-              backgroundStyle="radial-gradient(circle at center, #fff 0%, #a7d8ff 200%)"
             />
           ))}
         </motion.div>

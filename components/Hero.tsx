@@ -8,7 +8,6 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -16,7 +15,6 @@ const Hero = () => {
         }}
       />
 
-      {/* Darker overlay */}
       <div
         className="absolute inset-0"
         style={{
@@ -25,7 +23,6 @@ const Hero = () => {
         }}
       />
 
-      {/* Subtle texture overlay */}
       <div
         className="absolute inset-0 opacity-[0.08]"
         style={{

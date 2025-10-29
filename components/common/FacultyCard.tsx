@@ -8,8 +8,7 @@ const FacultyCard = ({
   designation,
   image,
   delay = 0,
-  imageStyles,
-  backgroundStyle,
+  imageStyles
 }: any) => {
   return (
     <motion.div
@@ -22,11 +21,6 @@ const FacultyCard = ({
       <div className="bg-card rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden border">
         <div
           className={`relative overflow-hidden flex items-center justify-center`}
-          style={{
-            background:
-              backgroundStyle ||
-              "radial-gradient(circle at center, #b3e5fc 0%, #e1f5fe 100%)",
-          }}
         >
           <Image
             src={image}

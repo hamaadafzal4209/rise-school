@@ -56,9 +56,6 @@ const ManagementPage = () => {
               name={member.name}
               designation={member.designation}
               image={member.image}
-              experience=""
-              education=""
-              email=""
               delay={index * 0.15}
             />
           ))}
