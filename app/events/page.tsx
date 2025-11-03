@@ -80,7 +80,7 @@ const EventGallery = () => {
         highlight="Events"
         description="Explore unforgettable moments from our academic, recreational, and cultural events — where learning meets celebration."
         breadcrumb="Home » Event Gallery"
-        backgroundImage="/assets/events/prize5.jpg"
+        backgroundImage="/assets/events/Prize5.jpg"
       />
 
       <section className="py-16 bg-background">

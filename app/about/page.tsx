@@ -65,7 +65,7 @@ const AboutPage = () => {
         highlight="RISE Premier"
         description="Where brilliance meets purpose. Empowering the next generation with wisdom, integrity, and a spirit of excellence."
         breadcrumb="Home » About"
-        backgroundImage="/assets/events/building1.jpg"
+        backgroundImage="/assets/events/Building1.jpg"
       />
 
       <section ref={ref} className="py-20 bg-gradient-subtle">

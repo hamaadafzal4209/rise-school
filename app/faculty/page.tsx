@@ -170,7 +170,7 @@ const FacultyPage = () => {
           pagTheir hard work, guidance, and commitment inspire our students and strengthen our institution every 
           day. They are the foundation of our success and the heart of our academic community. "
         breadcrumb="Home » Faculty"
-        backgroundImage="/assets/events/prize7.jpg"
+        backgroundImage="/assets/events/Prize7.jpg"
         backgroundStyles={{ position: "top" }}
       />
 
