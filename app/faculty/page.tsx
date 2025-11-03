@@ -153,9 +153,10 @@ const FacultyPage = () => {
       name: "Sir Tahir Aziz",
       qualification: "ACCA (Fin)",
       details: [
-        "18 Years Teaching Experience",
-        "Expert in Cost & Management Accounting, Quantitative Analysis, and MS Office",
-        "Trained thousands of professional accountancy students",
+        " 18 Years of Teaching Experience",
+        "Teaching Maths & Stats, Cost and Management Accounting",
+        'Two Merit Certificates in ICAP exams',
+        'Expert Trainer of Ms. Office with Bulk of Practical Tips'
       ],
       image: "/assets/faculty/SirTahirAziz.jpg",
     },

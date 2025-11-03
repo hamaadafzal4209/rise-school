@@ -164,31 +164,6 @@ const AboutPage = () => {
                 polishing our young RISIANS into responsible and capable
                 citizens of Pakistan.
               </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.8, duration: 0.6 }}
-                className="grid sm:grid-cols-2 gap-4 pt-6"
-              >
-                {[
-                  { label: "Academic Excellence", value: "98%" },
-                  { label: "University Placement", value: "95%" },
-                  { label: "Student Satisfaction", value: "99%" },
-                  { label: "Faculty with PhD", value: "85%" },
-                ].map((stat, index) => (
-                  <div key={stat.label} className="flex items-center space-x-3">
-                    <div className="w-12 h-12 rounded-lg gradient-primary flex items-center justify-center">
-                      <span className="text-primary-foreground font-bold text-lg">
-                        {stat.value}
-                      </span>
-                    </div>
-                    <span className="font-medium text-foreground">
-                      {stat.label}
-                    </span>
-                  </div>
-                ))}
-              </motion.div>
             </motion.div>
           </div>
         </div>

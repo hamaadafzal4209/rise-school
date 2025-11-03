@@ -5,20 +5,20 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import {
   Users,
+  Award,
+  MonitorPlay,
   Laptop,
-  Dumbbell,
-  Presentation,
-  Coffee,
   BookOpen,
+  Coffee,
 } from "lucide-react";
 
 const facilities = [
   { title: "Renowned Teachers", icon: Users },
-  { title: "Computer Labs", icon: Laptop },
-  { title: "Sports Facilities", icon: Dumbbell },
-  { title: "Lecture Rooms", icon: Presentation },
+  { title: "High Pass Rates", icon: Award },
+  { title: "Multimedia Classes", icon: MonitorPlay },
+  { title: "Computer Lab", icon: Laptop },
+  { title: "Library", icon: BookOpen },
   { title: "Cafeteria", icon: Coffee },
-  { title: "Libraries", icon: BookOpen },
 ];
 
 const CampusFacilities = () => {
@@ -61,7 +61,7 @@ const CampusFacilities = () => {
                 className="group text-center"
               >
                 <div className="flex flex-col items-center gap-4">
-                  <div className="w-20 h-20 rounded-full gradient-primary flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-full gradient-primary flex items-center justify-center shadow-lg">
                     <Icon className="w-10 h-10 text-white" />
                   </div>
                   <p className="text-md font-medium text-primary transition-colors">

@@ -106,7 +106,7 @@ const Footer = () => {
               <div className="space-y-3 text-white/90">
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-white/70 mt-1" />
-                  <span>Aurangzeb Block, Garden Town, Lahore, Punjab</span>
+                  <span>6 Aurangzaib Block, New Garden Town, Lahore, Pakistan </span>
                 </div>
 
                 <div className="flex items-start space-x-3">

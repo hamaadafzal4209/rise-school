@@ -14,22 +14,17 @@ const FacultySection = () => {
     {
       name: "Mr. Naveed Ansari",
       designation: "Chief Executive Officer (CEO) & Faculty Member",
-      image: "/assets/management/management1.jpg",
+      image: "/assets/faculty/SirNaveed.jpg",
     },
     {
-      name: "Mr. Tanveer Ansari",
+      name: "Sir Zahid Qavi",
       designation: "Director Business Development",
-      image: "/assets/management/management2.jpg",
+      image: "/assets/faculty/SirZahid.jpg",
     },
     {
-      name: "Mr. Adnan Rasheed",
+      name: "Sir Adnan Rasheed",
       designation: "Director Operations & Faculty Member",
-      image: "/assets/management/management3.jpg",
-    },
-    {
-      name: "Mr. Zahid Qavi",
-      designation: "Director Online Education & Faculty Member",
-      image: "/assets/management/management4.jpg",
+      image: "/assets/faculty/SirAdnan.jpg",
     },
   ];
 
@@ -68,6 +63,7 @@ const FacultySection = () => {
               name={faculty.name}
               image={faculty.image}
               delay={i * 0.1}
+              imageStyles={{objectPosition: 'top', objectFit: 'cover'}}
             />
           ))}
         </motion.div>

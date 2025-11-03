@@ -120,37 +120,6 @@ const WhyChooseUs = () => {
             <FeatureCard key={f.title} {...f} delay={i * 0.1} />
           ))}
         </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="mt-16 text-center"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8 rounded-2xl bg-card shadow-medium border">
-            {[
-              { label: "Student Satisfaction", value: "99%" },
-              { label: "Parent Trust", value: "97%" },
-              { label: "Scholarships Awarded", value: "200+" },
-              { label: "Successful Graduates", value: "95%" },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
-                className="text-center"
-              >
-                <div className="text-3xl md:text-4xl font-bold gradient-text bg-clip-text text-transparent mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-foreground font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
