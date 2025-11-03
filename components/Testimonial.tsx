@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
@@ -17,8 +17,6 @@ const TestimonialSlider = () => {
       role: "Parent of Emily, Age 5",
       content:
         "RISE Premier has been a blessing for our family. Emily has blossomed in their caring environment and has made incredible progress with her social skills.",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
       rating: 5,
     },
     {
@@ -27,8 +25,6 @@ const TestimonialSlider = () => {
       role: "Parent of Alex, Age 6",
       content:
         "The teachers at RISE Premier are exceptional. They truly understand how to engage children with different learning styles and needs.",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
       rating: 5,
     },
     {
@@ -37,8 +33,6 @@ const TestimonialSlider = () => {
       role: "Parent of Noah, Age 4",
       content:
         "The inclusive environment at RISE Premier has helped Noah develop confidence and friendships. We couldn't be happier with his progress.",
-      image:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
       rating: 4,
     },
     {
@@ -47,13 +41,10 @@ const TestimonialSlider = () => {
       role: "Parent of Sophia, Age 5",
       content:
         "The curriculum is well-designed and the facilities are excellent. Sophia looks forward to going to school every single day.",
-      image:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
       rating: 5,
     },
   ];
 
-  // Auto-advance the slider
   useEffect(() => {
     if (!isAutoPlaying) return;
 
@@ -80,14 +71,14 @@ const TestimonialSlider = () => {
     );
   };
 
-  const goToSlide = (index : any) => {
+  const goToSlide = (index: any) => {
     setIsAutoPlaying(false);
     setCurrentIndex(index);
   };
 
-  const StarRating = ({ rating } : any) => {
+  const StarRating = ({ rating }: any) => {
     return (
-      <div className="flex justify-center mt-2">
+      <div className="flex items-center mt-2">
         {[...Array(5)].map((_, i) => (
           <svg
             key={i}
@@ -120,7 +111,7 @@ const TestimonialSlider = () => {
       </div>
 
       <div className="relative overflow-hidden rounded-xl shadow-md bg-white">
-        <div className="relative h-[600px] md:h-96 md:ml-8">
+        <div className="relative h-[600px] w-full md:h-96 md:ml-8">
           <AnimatePresence initial={false}>
             <motion.div
               key={currentIndex}
@@ -132,7 +123,7 @@ const TestimonialSlider = () => {
             >
               <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
                 <div className="text-5xl text-indigo-200 mb-4">"</div>
-                <p className="text-lg text-gray-700 mb-6 italic max-w-md">
+                <p className="text-lg text-gray-700 mb-6 italic pr-12">
                   {testimonials[currentIndex].content}
                 </p>
                 <div>
@@ -145,41 +136,10 @@ const TestimonialSlider = () => {
                   <StarRating rating={testimonials[currentIndex].rating} />
                 </div>
               </div>
-
-              <div className="flex-1 flex justify-center mt-8 md:mt-0">
-                <motion.div
-                  initial={{ scale: 0.9 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                  className="relative"
-                >
-                  <img
-                    src={testimonials[currentIndex].image}
-                    alt={testimonials[currentIndex].name}
-                    className="w-48 h-48 rounded-full object-cover shadow-lg border-4 border-white"
-                  />
-                  <div className="absolute -bottom-2 -right-2 bg-indigo-500 text-white p-2 rounded-full">
-                    <svg
-                      className="w-6 h-6"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-                      />
-                    </svg>
-                  </div>
-                </motion.div>
-              </div>
             </motion.div>
           </AnimatePresence>
         </div>
 
-        {/* Navigation buttons */}
         <button
           onClick={goToPrevious}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-indigo-50 transition-colors"
@@ -220,7 +180,6 @@ const TestimonialSlider = () => {
           </svg>
         </button>
 
-        {/* Dots indicator */}
         <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
           {testimonials.map((_, index) => (
             <button
