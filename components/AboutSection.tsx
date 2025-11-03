@@ -87,10 +87,12 @@ const AboutSection = () => {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="text-lg text-muted-foreground leading-relaxed mb-4"
             >
-              The acronym “RISE” stands for 'resurgence and intuition for
-              strategic excellence'. This is the mission we have set before us
-              to revive an insight among the students so that they may procure
-              thought-out luminosity and be above the rest.
+              The acronym “RISE” stands for Resurgence of Intuition for
+              Strategic Excellence. RISE Premier School of Accountancy was
+              established in July 2008 and has rapidly grown into one of the
+              leading institutions playing a pivotal role in the promotion of
+              professional accountancy, commerce, and business administration
+              education in the country.
             </motion.p>
 
             <motion.p
@@ -99,8 +101,10 @@ const AboutSection = () => {
               transition={{ delay: 0.7, duration: 0.6 }}
               className="text-lg text-muted-foreground leading-relaxed mb-4"
             >
-              The mission of RISE is the all-around development of the students
-              for the benefit of society.
+              We have a highly competent and experienced faculty and staff,
+              state-of-the-art facilities, and well furnished, spacious campuses
+              with a homely atmosphere conducive to learning and healthy
+              competition.
             </motion.p>
 
             <motion.p
@@ -109,28 +113,10 @@ const AboutSection = () => {
               transition={{ delay: 0.8, duration: 0.6 }}
               className="text-lg text-muted-foreground leading-relaxed mb-4"
             >
-              To focus on the character building of its young students so that
-              they could be useful citizens of the state.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.9, duration: 0.6 }}
-              className="text-lg text-muted-foreground leading-relaxed mb-4"
-            >
-              To promote the qualities of head and heart through curricular and
-              co-curricular activities.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 1.0, duration: 0.6 }}
-              className="text-lg text-muted-foreground leading-relaxed"
-            >
-              To guide its youth to grow as robust individuals with a
-              God-fearing youthful spirit.
+              The education and environment we offer provide an excellent
+              combination of curricular and co curricular activities, polishing
+              our young RISIANS into responsible and capable citizens of
+              Pakistan.
             </motion.p>
 
             <motion.div

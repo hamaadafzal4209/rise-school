@@ -4,7 +4,13 @@ import { motion } from "framer-motion";
 import Hero from "@/components/common/Hero";
 import Image from "next/image";
 
-const FacultyCard = ({ name, qualification, details, image, delay = 0 } : any) => {
+const FacultyCard = ({
+  name,
+  qualification,
+  details,
+  image,
+  delay = 0,
+}: any) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -29,7 +35,7 @@ const FacultyCard = ({ name, qualification, details, image, delay = 0 } : any) =
         <p className="text-primary font-semibold mb-3">{qualification}</p>
 
         <ul className="text-gray-700 text-sm space-y-2 text-left">
-          {details.map((point: any, i:any) => (
+          {details.map((point: any, i: any) => (
             <li key={i} className="flex items-start">
               <span className="text-primary font-bold mr-2">•</span>
               <span>{point}</span>
@@ -160,7 +166,9 @@ const FacultyPage = () => {
       <Hero
         title="Meet Our"
         highlight="Faculty"
-        description="Our esteemed faculty members bring academic excellence, professional expertise, and a passion for teaching that inspires students to achieve their goals."
+        description="We sincerely thank all our faculty members for their dedication, passion, and excellence in teaching. 
+          pagTheir hard work, guidance, and commitment inspire our students and strengthen our institution every 
+          day. They are the foundation of our success and the heart of our academic community. "
         breadcrumb="Home » Faculty"
         backgroundImage="/assets/events/prize7.jpg"
         backgroundStyles={{ position: "top" }}

@@ -10,6 +10,8 @@ import {
   Trophy,
   Globe,
   Heart,
+  Award,
+  HandHeart,
 } from "lucide-react";
 import FeatureCard from "./common/FeatureCard";
 
@@ -20,45 +22,59 @@ const WhyChooseUs = () => {
   const features = [
     {
       icon: GraduationCap,
-      title: "Academic Excellence",
+      title: "Committed to Quality Education",
       description:
-        "Rigorous curriculum designed to challenge and inspire students to reach their full potential.",
+        "RISE ensures top-tier education standards with structured learning, practical exposure, and continuous performance evaluation.",
       color: "from-blue-500 to-primary",
     },
     {
       icon: Users,
-      title: "Expert Faculty",
+      title: "Trusted by Parents and Students",
       description:
-        "World-class educators with advanced degrees and years of teaching experience.",
+        "RISE has earned a reputation for reliability, transparency, and consistent academic success — trusted by thousands nationwide.",
       color: "from-primary to-purple-600",
     },
     {
-      icon: Lightbulb,
-      title: "Innovation Focus",
+      icon: HandHeart,
+      title: "Dedicated to Student Success",
       description:
-        "Cutting-edge technology and modern teaching methods to prepare students for the future.",
-      color: "from-amber-500 to-orange-600",
-    },
-    {
-      icon: Trophy,
-      title: "Proven Results",
-      description:
-        "Outstanding academic achievements and high university placement rates year after year.",
+        "Every student receives personal guidance and mentoring to achieve academic and professional excellence in accountancy.",
       color: "from-emerald-500 to-teal-600",
     },
     {
-      icon: Globe,
-      title: "Global Perspective",
+      icon: Lightbulb,
+      title: "Innovative Teaching Methods",
       description:
-        "International programs and diverse community preparing students for global citizenship.",
+        "We promote modern, effective teaching strategies that make learning engaging, conceptually strong, and exam-focused.",
+      color: "from-amber-500 to-orange-600",
+    },
+    {
+      icon: Globe,
+      title: "Guided by Expert Mentors",
+      description:
+        "Our knowledgeable and experienced faculty provide practical insights and professional mentorship at every step.",
       color: "from-primary to-indigo-600",
     },
     {
-      icon: Heart,
-      title: "Holistic Development",
+      icon: Trophy,
+      title: "High Results with Brisk Batches",
       description:
-        "Focus on character building, leadership skills, and personal growth beyond academics.",
+        "Focused short-duration batches designed to deliver outstanding results without compromising learning quality.",
       color: "from-pink-500 to-rose-600",
+    },
+    {
+      icon: Award,
+      title: "Scholarships & Financial Aid",
+      description:
+        "We believe in equal opportunity — offering scholarships and financial assistance to deserving and hardworking students.",
+      color: "from-cyan-500 to-sky-600",
+    },
+    {
+      icon: Heart,
+      title: "Shaping Future Leaders",
+      description:
+        "RISE is committed to developing confident, ethical, and competent professionals who will lead the future of accountancy.",
+      color: "from-violet-500 to-fuchsia-600",
     },
   ];
 
@@ -87,14 +103,11 @@ const WhyChooseUs = () => {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-            Why Choose Rise
+            Why Choose RISE
           </div>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
             Why Choose Us
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            At RISE Premier, we take pride in being a trusted name in accountancy education. With dependable guidance and a commitment to academic excellence, we provide students with the right mentorship and learning environment to build strong foundations. Choosing RISE means choosing reliability, excellence, and success.
-          </p>
         </motion.div>
 
         <motion.div
@@ -117,9 +130,9 @@ const WhyChooseUs = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8 rounded-2xl bg-card shadow-medium border">
             {[
               { label: "Student Satisfaction", value: "99%" },
-              { label: "Parent Approval", value: "97%" },
-              { label: "Graduate Success", value: "95%" },
-              { label: "Awards & Recognition", value: "50+" },
+              { label: "Parent Trust", value: "97%" },
+              { label: "Scholarships Awarded", value: "200+" },
+              { label: "Successful Graduates", value: "95%" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

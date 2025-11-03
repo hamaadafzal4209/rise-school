@@ -14,22 +14,22 @@ const FacultySection = () => {
     {
       name: "Mr. Naveed Ansari",
       designation: "Chief Executive Officer (CEO) & Faculty Member",
-      image: '/assets/management/management1.jpg'
-       },
+      image: "/assets/management/management1.jpg",
+    },
     {
       name: "Mr. Tanveer Ansari",
       designation: "Director Business Development",
-      image: '/assets/management/management2.jpg'
+      image: "/assets/management/management2.jpg",
     },
     {
-        name: "Mr. Adnan Rasheed",
-        designation: "Director Operations & Faculty Member",
-        image: '/assets/management/management3.jpg'
+      name: "Mr. Adnan Rasheed",
+      designation: "Director Operations & Faculty Member",
+      image: "/assets/management/management3.jpg",
     },
     {
       name: "Mr. Zahid Qavi",
       designation: "Director Online Education & Faculty Member",
-      image: '/assets/management/management4.jpg'
+      image: "/assets/management/management4.jpg",
     },
   ];
 
@@ -49,8 +49,11 @@ const FacultySection = () => {
             Experienced Faculty
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Our dedicated team of educators brings years of experience and
-            passion for teaching to create an exceptional learning environment.
+            We sincerely thank all our faculty members for their dedication,
+            passion, and excellence in teaching. Their hard work, guidance, and
+            commitment inspire our students and strengthen our institution every
+            day. They are the foundation of our success and the heart of our
+            academic community.
           </p>
         </motion.div>
 
