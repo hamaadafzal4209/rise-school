@@ -44,28 +44,6 @@ const AboutPage = () => {
                 />
                 <div className="absolute inset-0 bg-linear-to-tr from-primary/30 to-transparent" />
               </div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.4, duration: 0.8 }}
-                className="absolute -bottom-8 -right-8 bg-card border shadow rounded-xl p-6"
-              >
-                <div className="grid grid-cols-2 gap-6 text-center">
-                  <div>
-                    <div className="text-3xl font-bold text-primary">25+</div>
-                    <div className="text-sm text-muted-foreground font-medium">
-                      Years of Excellence
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-primary">1000+</div>
-                    <div className="text-sm text-muted-foreground font-medium">
-                      Graduates
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
             </motion.div>
 
             <motion.div
