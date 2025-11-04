@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import FacultyCard from "@/components/common/FacultyCard";
 import Link from "next/link";
 import FacultyDetailCard from "./common/FacultyDetailCard";
 
