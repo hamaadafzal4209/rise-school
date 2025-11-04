@@ -39,7 +39,7 @@ const Hero = ({
         backgroundAttachment: backgroundStyles.attachment || "scroll",
       }}
     >
-      <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/70 to-gray-900/85" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/60 to-gray-900/65" />
 
       <div className="relative container mx-auto px-6 text-center text-white">
         {breadcrumb && (

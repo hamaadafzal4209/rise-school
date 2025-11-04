@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Hero from "@/components/common/Hero";
 import Image from "next/image";
+import FacultyDetailCard from "@/components/common/FacultyDetailCard";
 
 const FacultyCard = ({
   name,
@@ -155,8 +156,8 @@ const FacultyPage = () => {
       details: [
         " 18 Years of Teaching Experience",
         "Teaching Maths & Stats, Cost and Management Accounting",
-        'Two Merit Certificates in ICAP exams',
-        'Expert Trainer of Ms. Office with Bulk of Practical Tips'
+        "Two Merit Certificates in ICAP exams",
+        "Expert Trainer of Ms. Office with Bulk of Practical Tips",
       ],
       image: "/assets/faculty/SirTahirAziz.jpg",
     },
@@ -167,9 +168,8 @@ const FacultyPage = () => {
       <Hero
         title="Meet Our"
         highlight="Faculty"
-        description="We sincerely thank all our faculty members for their dedication, passion, and excellence in teaching. 
-          pagTheir hard work, guidance, and commitment inspire our students and strengthen our institution every 
-          day. They are the foundation of our success and the heart of our academic community. "
+        description=" Meet the educators who shape the future with commitment,
+              expertise, and inspiration."
         breadcrumb="Home » Faculty"
         backgroundImage="/assets/events/Prize7.jpg"
         backgroundStyles={{ position: "top" }}
@@ -187,14 +187,17 @@ const FacultyPage = () => {
               Our <span className="text-primary">Dedicated Faculty</span>
             </h2>
             <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
-              Meet the educators who shape the future with commitment,
-              expertise, and inspiration.
+              We sincerely thank all our faculty members for their dedication,
+              passion, and excellence in teaching. pagTheir hard work, guidance,
+              and commitment inspire our students and strengthen our institution
+              every day. They are the foundation of our success and the heart of
+              our academic community.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {facultyMembers.map((faculty, index) => (
-              <FacultyCard
+              <FacultyDetailCard
                 key={faculty.name}
                 name={faculty.name}
                 qualification={faculty.qualification}

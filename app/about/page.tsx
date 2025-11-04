@@ -255,7 +255,7 @@ const AboutPage = () => {
             </p>
           </div>
 
-          <div className="mt-8 text-right">
+          <div className="mt-8 text-left">
             <p className="font-semibold text-foreground text-lg">
               Naveed Ansari - FCA
             </p>

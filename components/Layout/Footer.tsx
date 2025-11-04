@@ -97,33 +97,40 @@ const Footer = () => {
               </div>
 
               <p className="text-white/80 leading-relaxed mb-6 max-w-md">
-                RISE stands for Resurgence and Intuition for Strategic
-                Excellence. Our school is dedicated to the holistic development
-                of students, aiming to nurture them into socially responsible
-                and productive citizens.
+                The acronym “RISE” stands for Resurgence of Intuition for
+                Strategic Excellence. RISE Premier School of Accountancy was
+                established in July 2008 and has rapidly grown into one of the
+                leading institutions playing a pivotal role in the promotion of
+                professional accountancy, commerce, and business administration
+                education in the country.
               </p>
 
               <div className="space-y-3 text-white/90">
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-white/70 mt-1" />
-                  <span>6 Aurangzaib Block, New Garden Town, Lahore, Pakistan </span>
+                  <span>
+                    6 Aurangzaib Block, New Garden Town, Lahore, Pakistan{" "}
+                  </span>
                 </div>
 
                 <div className="flex items-start space-x-3">
                   <Phone className="w-5 h-5 text-white/70 mt-1" />
                   <div className="flex flex-col">
                     <span>
-                      Garden Town Branch: <strong>35941920</strong>
+                      <strong>+92 327 7333341</strong>
                     </span>
                     <span>
-                      Gulberg Branch: <strong>35751240</strong>
+                      <strong>+92 327 7333361</strong>
+                    </span>
+                    <span>
+                      <strong>+92 321 9705444</strong>
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-white/70" />
-                  <span>info@riseschool.edu.pk</span>
+                  <span>info@risepremier.pk</span>
                 </div>
               </div>
             </motion.div>

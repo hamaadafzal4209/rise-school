@@ -23,7 +23,6 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", href: "/", icon: Home },
     { name: "About", href: "/about", icon: Info },
-    { name: "Management", href: "/management", icon: Building2 },
     { name: "Faculty", href: "/faculty", icon: GraduationCap },
     { name: "Courses", href: "/courses", icon: BookOpen },
     { name: "Contact", href: "/contact", icon: Phone },

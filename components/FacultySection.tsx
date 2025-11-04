@@ -5,6 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import FacultyCard from "@/components/common/FacultyCard";
 import Link from "next/link";
+import FacultyDetailCard from "./common/FacultyDetailCard";
 
 const FacultySection = () => {
   const ref = useRef(null);
@@ -13,17 +14,32 @@ const FacultySection = () => {
   const facultyMembers = [
     {
       name: "Mr. Naveed Ansari",
-      designation: "Chief Executive Officer (CEO) & Faculty Member",
+      qualification: "FCA",
+      details: [
+        "23+ Years Teaching Experience",
+        "Exam-Focused Methodology",
+        "Extensive practice of Past papers",
+      ],
       image: "/assets/faculty/SirNaveed.jpg",
     },
     {
       name: "Sir Zahid Qavi",
-      designation: "Director Business Development",
+      qualification: "FCA",
+      details: [
+        "20+ Years Teaching Experience",
+        "3 Certificates of Merit",
+        "Innovative Style of Teaching",
+      ],
       image: "/assets/faculty/SirZahid.jpg",
     },
     {
       name: "Sir Adnan Rasheed",
-      designation: "Director Operations & Faculty Member",
+      qualification: "FCA",
+      details: [
+        "20+ Years Teaching Experience",
+        "5 Certificates of Merit/Gold Medals in CA Final",
+        "7 Position Holders in ACCA",
+      ],
       image: "/assets/faculty/SirAdnan.jpg",
     },
   ];
@@ -43,13 +59,6 @@ const FacultySection = () => {
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
             Experienced Faculty
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            We sincerely thank all our faculty members for their dedication,
-            passion, and excellence in teaching. Their hard work, guidance, and
-            commitment inspire our students and strengthen our institution every
-            day. They are the foundation of our success and the heart of our
-            academic community.
-          </p>
         </motion.div>
 
         <motion.div
@@ -58,13 +67,14 @@ const FacultySection = () => {
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {facultyMembers.map((faculty, i) => (
-            <FacultyCard
-              key={faculty.name}
-              name={faculty.name}
-              image={faculty.image}
-              delay={i * 0.1}
-              imageStyles={{objectPosition: 'top', objectFit: 'cover'}}
-            />
+             <FacultyDetailCard
+                key={faculty.name}
+                name={faculty.name}
+                qualification={faculty.qualification}
+                details={faculty.details}
+                image={faculty.image}
+                delay={i * 0.1}
+              />
           ))}
         </motion.div>
 
