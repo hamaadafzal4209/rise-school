@@ -8,42 +8,41 @@ const TestimonialSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const isInView = useInView(ref, { once: true });
+const testimonials = [
+  {
+    id: 1,
+    name: "Ahmed Khan",
+    role: "Parent of Hamza, Age 15",
+    content:
+      "RISE Premier has been a wonderful experience for our family. Hamza has grown so much in confidence and enjoys learning every day.",
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: "Bilal Ahmed",
+    role: "Parent of Zaid, Age 16",
+    content:
+      "The teachers at RISE Premier are truly dedicated. They make learning exciting and help every child reach their full potential.",
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: "Imran Malik",
+    role: "Parent of Rayyan, Age 14",
+    content:
+      "The caring environment at RISE Premier has helped Rayyan become more active and confident. We’re very happy with his progress.",
+    rating: 4,
+  },
+  {
+    id: 4,
+    name: "Usman Ali",
+    role: "Parent of Ayaan, Age 15",
+    content:
+      "The curriculum is engaging and the teachers are very supportive. Ayaan looks forward to school every morning with great enthusiasm.",
+    rating: 5,
+  },
+];
 
-  const testimonials = [
-    {
-      id: 1,
-      name: "Sarah Johnson",
-      role: "Parent of Emily, Age 5",
-      content:
-        "RISE Premier has been a blessing for our family. Emily has blossomed in their caring environment and has made incredible progress with her social skills.",
-      rating: 5,
-    },
-    {
-      id: 2,
-      name: "Michael Chen",
-      role: "Parent of Alex, Age 6",
-      content:
-        "The teachers at RISE Premier are exceptional. They truly understand how to engage children with different learning styles and needs.",
-      rating: 5,
-    },
-    {
-      id: 3,
-      name: "Jessica Williams",
-      role: "Parent of Noah, Age 4",
-      content:
-        "The inclusive environment at RISE Premier has helped Noah develop confidence and friendships. We couldn't be happier with his progress.",
-      rating: 4,
-    },
-    {
-      id: 4,
-      name: "David Rodriguez",
-      role: "Parent of Sophia, Age 5",
-      content:
-        "The curriculum is well-designed and the facilities are excellent. Sophia looks forward to going to school every single day.",
-      rating: 5,
-    },
-  ];
 
   useEffect(() => {
     if (!isAutoPlaying) return;

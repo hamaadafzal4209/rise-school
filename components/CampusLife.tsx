@@ -60,14 +60,12 @@ const CampusLife = () => {
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('/assets/events/study6.jpg')` }}
+          style={{ backgroundImage: `url('/assets/events/Study6.jpg')` }}
         />
         <div className="absolute inset-0 bg-linear-to-b from-black/70 via-gray-900/70 to-gray-800/80" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-12">
-        {/* Section Header */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
