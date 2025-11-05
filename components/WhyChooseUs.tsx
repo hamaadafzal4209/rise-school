@@ -102,11 +102,8 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-            Why Choose RISE
-          </div>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Why Choose Us
+            Why Choose RISE
           </h2>
         </motion.div>
 
