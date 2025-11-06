@@ -56,7 +56,7 @@ const CampusLife = () => {
   ];
 
   return (
-    <section ref={ref} className="relative py-24 overflow-hidden">
+    <section ref={ref} className="relative pt-24 overflow-hidden">
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -84,7 +84,6 @@ const CampusLife = () => {
           </p>
         </motion.div>
 
-        {/* Description Cards */}
         <motion.div
           variants={fadeUp}
           custom={0.3}
@@ -114,37 +113,6 @@ const CampusLife = () => {
                 {item.title}
               </h3>
               <p className="text-gray-200 leading-relaxed">{item.desc}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Stats Section */}
-        <motion.div
-          variants={fadeUp}
-          custom={0.6}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10"
-        >
-          {stats.map((stat, i) => (
-            <motion.div
-              key={stat.label}
-              whileHover={{ y: -6, scale: 1.03 }}
-              transition={{ type: "spring", stiffness: 200 }}
-              className="text-center rounded-2xl p-8 bg-white/10 backdrop-blur-md border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <div
-                className={`w-16 h-16 mx-auto mb-6 rounded-full bg-linear-to-tr ${stat.gradient} flex items-center justify-center shadow-lg`}
-              >
-                <stat.icon className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl md:text-5xl font-extrabold text-white mb-3 drop-shadow">
-                {stat.value.toLocaleString()}
-                {stat.suffix}
-              </div>
-              <p className="text-gray-200 font-medium text-lg">
-                {stat.label}
-              </p>
             </motion.div>
           ))}
         </motion.div>
