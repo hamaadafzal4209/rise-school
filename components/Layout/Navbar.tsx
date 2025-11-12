@@ -13,18 +13,27 @@ import {
   Info,
   Phone,
   ChevronDown,
+  CalendarHeartIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isCourseOpen, setIsCourseOpen] = useState(false); // for mobile accordion
+  const [isCourseOpen, setIsCourseOpen] = useState(false);
   const [hoveredDropdown, setHoveredDropdown] = useState<string | null>(null);
   const pathname = usePathname();
 
   const navItems = [
     { name: "Home", href: "/", icon: Home },
-    { name: "About", href: "/about", icon: Info },
+    {
+      name: "About",
+      icon: Info,
+      subLinks: [
+        { name: "Introduction", href: "/about/introduction" },
+        { name: "CEO Message", href: "/about/ceo-message" },
+        { name: "Why RISE", href: "/about/why-rise" },
+      ],
+    },
     { name: "Faculty", href: "/faculty", icon: GraduationCap },
     {
       name: "Courses",
@@ -32,8 +41,11 @@ const Navbar = () => {
       subLinks: [
         { name: "CA", href: "/courses/ca" },
         { name: "ACCA", href: "/courses/acca" },
+        { name: "CIA", href: "/courses/cia" },
+        { name: "CMA", href: "/courses/cma" },
       ],
     },
+    { name: "Events", href: "/events", icon: CalendarHeartIcon },
     { name: "Contact", href: "/contact", icon: Phone },
   ];
 
@@ -67,7 +79,9 @@ const Navbar = () => {
                 <div
                   key={item.name}
                   className="relative"
-                  onMouseEnter={() => hasDropdown && setHoveredDropdown(item.name)}
+                  onMouseEnter={() =>
+                    hasDropdown && setHoveredDropdown(item.name)
+                  }
                   onMouseLeave={() => hasDropdown && setHoveredDropdown(null)}
                 >
                   {/* Main Button (no navigation if hasDropdown) */}

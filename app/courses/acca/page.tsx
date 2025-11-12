@@ -126,7 +126,7 @@ export default function ACCAPage() {
         backgroundImage="/assets/course-banner.jpeg"
       />
 
-      <section className="py-20 bg-gray-50">
+      <section className="pt-20 bg-gray-50">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold mb-3 tracking-tight text-gray-900">
@@ -196,6 +196,30 @@ export default function ACCAPage() {
           })}
         </div>
       </section>
+
+<section className="pb-20 pt-8 bg-linear-to-r from-blue-50 via-cyan-50 to-teal-50">
+  <div className="container mx-auto px-6 lg:px-12 text-center">
+    <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-primary">
+      Why Choose <span className="text-gradient bg-clip-text">RISE Premier</span> for ACCA
+    </h2>
+    <p className="text-gray-700 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed mb-8">
+      RISE Premier: Your Gateway to a Global ACCA Career
+    </p>
+
+    <div className="max-w-4xl mx-auto space-y-6 text-gray-700 text-base sm:text-lg leading-relaxed">
+      <p>
+        Join one of the best ACCA colleges in Lahore and unlock international opportunities in accounting, finance, and business.
+      </p>
+      <p>
+        At RISE Premier School of Accountancy, we combine world-class teaching, modern technology, and personal mentorship to make your ACCA journey successful and rewarding.
+      </p>
+      <p>
+        With top-tier faculty, structured coaching, and global career support, RISE Premier stands out as one of the best ACCA institutes in Lahore and Pakistan — where your dream of becoming an internationally recognized finance professional matures.
+      </p>
+    </div>
+  </div>
+</section>
+
     </main>
   );
 }
