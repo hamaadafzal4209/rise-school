@@ -16,7 +16,7 @@ interface HeroProps {
   description?: string;
   breadcrumb?: string;
   backgroundImage?: string;
-  backgroundStyles?: HeroBackgroundStyles; 
+  backgroundStyles?: HeroBackgroundStyles;
 }
 
 const Hero = ({
@@ -39,7 +39,7 @@ const Hero = ({
         backgroundAttachment: backgroundStyles.attachment || "scroll",
       }}
     >
-      <div className="absolute inset-0 bg-linear-to-l from-black/10 via-black/50 to-gray-900/50" />
+      <div className="absolute inset-0 bg-linear-to-r from-black/60 via-black/30 to-transparent" />
 
       <div className="relative container mx-auto px-6 text-left text-white">
         {breadcrumb && (
@@ -57,12 +57,10 @@ const Hero = ({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-gray-50"
+          className="text-3xl md:text-5xl font-bold mb-6 leading-tight text-gray-50 max-w-md"
         >
           {title}{" "}
-          {highlight && (
-            <span className="text-blue-600">{highlight}</span>
-          )}
+          {highlight && <span className="text-blue-600">{highlight}</span>}
         </motion.h1>
 
         {subtitle && (
@@ -70,7 +68,7 @@ const Hero = ({
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-2xl md:text-3xl font-semibold text-gray-100 mb-4"
+            className="text-2xl md:text-3xl font-semibold max-w-md text-gray-100 mb-4"
           >
             {subtitle}
           </motion.h2>
@@ -81,7 +79,7 @@ const Hero = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-lg md:text-xl text-gray-200 max-w-2xl leading-relaxed"
+            className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-md"
           >
             {description}
           </motion.p>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle, BookOpen, Layers, ArrowRightCircle } from "lucide-react";
 import Hero from "@/components/common/Hero";
+import { Button } from "@/components/ui/button";
 
 const caCourse = {
   id: "ca",
@@ -210,6 +211,131 @@ const CoursesPage = () => {
               </motion.div>
             )}
           </AnimatePresence>
+        </div>
+      </section>
+      <section className="pb-20 pt-8 bg-linear-to-r from-blue-50 via-cyan-50 to-teal-50">
+        <div className="container mx-auto px-6 lg:px-12 text-center">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-primary">
+            Why Choose{" "}
+            <span className="text-gradient bg-clip-text">RISE Premier</span> for
+            CA
+          </h2>
+          <p className="text-gray-700 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed mb-12">
+            RISE Premier: Your #1 Choice to Excel in Chartered Accountancy in
+            Pakistan
+          </p>
+
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-left text-gray-700 text-base sm:text-lg leading-relaxed">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2 text-primary">
+                1. Expert & Experienced Faculty
+              </h3>
+              <p>
+                Learn from qualified Chartered Accountants and industry
+                professionals who have guided hundreds of students to ICAP
+                success. Our faculty members are known for their clear concepts,
+                personalized teaching, and proven exam strategies.
+              </p>
+              <p className="mt-2 text-sm text-gray-400">
+                Keywords: best CA teachers in Lahore, experienced CA faculty
+                Pakistan, top CA instructors.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2 text-primary">
+                2. Complete ICAP Curriculum Coverage
+              </h3>
+              <p>
+                RISE Premier offers comprehensive preparation for all ICAP
+                levels — PRC, CAF, CFAP, and MSA — with updated study resources,
+                mock exams, and continuous mentoring.
+              </p>
+              <p className="mt-2 text-sm text-gray-400">
+                Keywords: CA classes in Pakistan, ICAP course preparation, CA
+                syllabus Lahore.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2 text-primary">
+                3. Modern Learning Environment
+              </h3>
+              <p>
+                We combine traditional classroom excellence with digital
+                innovation. Our online CA classes let students from anywhere in
+                Pakistan access the same quality education as on-campus
+                learners.
+              </p>
+              <p className="mt-2 text-sm text-gray-400">
+                Keywords: online CA in Pakistan, CA classes Lahore online,
+                hybrid CA institute.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2 text-primary">
+                4. Consistent Results & Success Stories
+              </h3>
+              <p>
+                RISE Premier’s students consistently secure top ICAP positions
+                and outstanding pass rates. Our results speak louder than words
+                — proving our dedication to quality and performance.
+              </p>
+              <p className="mt-2 text-sm text-gray-400">
+                Keywords: CA results Pakistan, CA toppers Lahore, best CA
+                results institute.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2 text-primary">
+                5. Career Guidance & Professional Development
+              </h3>
+              <p>
+                We prepare you not just for exams but for your professional
+                career. RISE Premier offers career counseling, interview
+                preparation, and mentorship for your professional life.
+              </p>
+              <p className="mt-2 text-sm text-gray-400">
+                Keywords: CA career in Pakistan, jobs for Chartered Accountants,
+                CA training in Lahore.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2 text-primary">
+                6. Convenient Campuses & Nationwide Online Access
+              </h3>
+              <p>
+                With modern campus in Lahore and online programs across
+                Pakistan, RISE Premier ensures accessibility for every aspiring
+                CA student.
+              </p>
+              <p className="mt-2 text-sm text-gray-400">
+                Keywords: CA institute in Lahore, CA academy near me, online CA
+                classes Pakistan.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-lg sm:text-xl font-medium text-gray-700 mb-4">
+              📈 Start Your CA Journey with Confidence
+            </p>
+            <p className="text-gray-700 max-w-3xl mx-auto mb-6">
+              Join RISE Premier, the institute trusted by thousands of CA
+              students nationwide. Whether you’re based in Lahore or anywhere in
+              Pakistan, our goal is simple:
+              <strong>
+                {" "}
+                To help you become a successful Chartered Accountant.
+              </strong>
+            </p>
+            <Button className="gradient-primary shadow-medium px-8 py-3">
+              Enroll Today
+            </Button>
+          </div>
         </div>
       </section>
     </main>

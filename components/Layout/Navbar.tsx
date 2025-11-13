@@ -19,8 +19,8 @@ import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isCourseOpen, setIsCourseOpen] = useState(false);
-  const [hoveredDropdown, setHoveredDropdown] = useState<string | null>(null);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null); // for mobile dropdowns
+  const [hoveredDropdown, setHoveredDropdown] = useState<string | null>(null); // for desktop hover
   const pathname = usePathname();
 
   const navItems = [
@@ -56,9 +56,7 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md shadow-md transition-all duration-300"
     >
       <div className="container mx-auto px-4">
-        {/* Desktop Navbar */}
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <motion.div whileHover={{ scale: 1.05 }}>
             <Link href="/">
               <img
@@ -69,7 +67,6 @@ const Navbar = () => {
             </Link>
           </motion.div>
 
-          {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-1 relative">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
@@ -84,7 +81,6 @@ const Navbar = () => {
                   }
                   onMouseLeave={() => hasDropdown && setHoveredDropdown(null)}
                 >
-                  {/* Main Button (no navigation if hasDropdown) */}
                   {hasDropdown ? (
                     <button
                       type="button"
@@ -118,7 +114,6 @@ const Navbar = () => {
                     </Link>
                   )}
 
-                  {/* Dropdown */}
                   {hasDropdown && (
                     <AnimatePresence>
                       {hoveredDropdown === item.name && (
@@ -151,7 +146,6 @@ const Navbar = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 rounded-lg cursor-pointer gradient-primary transition-colors"
@@ -164,7 +158,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Dropdown */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -181,33 +174,45 @@ const Navbar = () => {
 
                   return (
                     <div key={item.name}>
-                      <div
-                        onClick={() =>
-                          hasDropdown
-                            ? setIsCourseOpen(!isCourseOpen)
-                            : setIsOpen(false)
-                        }
-                        className={`flex items-center justify-between space-x-3 px-6 py-3 mx-4 rounded-lg font-medium cursor-pointer transition-colors ${
-                          isActive
-                            ? "gradient-primary text-white shadow-md"
-                            : "text-foreground hover:text-primary hover:bg-muted/40"
-                        }`}
-                      >
-                        <div className="flex items-center space-x-3">
-                          <item.icon className="w-5 h-5" />
-                          <span>{item.name}</span>
-                        </div>
-                        {hasDropdown && (
+                      {hasDropdown ? (
+                        <div
+                          onClick={() =>
+                            setOpenDropdown(
+                              openDropdown === item.name ? null : item.name
+                            )
+                          }
+                          className={`flex items-center justify-between space-x-3 px-6 py-3 mx-4 rounded-lg font-medium cursor-pointer transition-colors ${
+                            isActive
+                              ? "gradient-primary text-white shadow-md"
+                              : "text-foreground hover:text-primary hover:bg-muted/40"
+                          }`}
+                        >
+                          <div className="flex items-center space-x-3">
+                            <item.icon className="w-5 h-5" />
+                            <span>{item.name}</span>
+                          </div>
                           <ChevronDown
                             className={`w-4 h-4 transition-transform ${
-                              isCourseOpen ? "rotate-180" : ""
+                              openDropdown === item.name ? "rotate-180" : ""
                             }`}
                           />
-                        )}
-                      </div>
+                        </div>
+                      ) : (
+                        <Link href={item.href} onClick={() => setIsOpen(false)}>
+                          <div
+                            className={`flex items-center space-x-3 px-6 py-3 mx-4 rounded-lg font-medium cursor-pointer transition-colors ${
+                              isActive
+                                ? "gradient-primary text-white shadow-md"
+                                : "text-foreground hover:text-primary hover:bg-muted/40"
+                            }`}
+                          >
+                            <item.icon className="w-5 h-5" />
+                            <span>{item.name}</span>
+                          </div>
+                        </Link>
+                      )}
 
-                      {/* Mobile Accordion Dropdown */}
-                      {hasDropdown && isCourseOpen && (
+                      {hasDropdown && openDropdown === item.name && (
                         <motion.div
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: "auto" }}

@@ -8,7 +8,6 @@ const cmaCourse = {
   id: "cma",
   title: "CMA | Certified Management Accountant",
   sections: [
-    // SECTION 1
     {
       heading: "What is CMA (USA)?",
       content: [
@@ -17,7 +16,6 @@ const cmaCourse = {
       ],
     },
 
-    // SECTION 2
     {
       heading: "Key Highlights",
       subjects: [
@@ -35,70 +33,67 @@ const cmaCourse = {
       ],
     },
 
-    // SECTION 3
     {
       heading: "CMA (USA) Exam Structure",
       subjects: [
         {
           title: "Part 1 – Financial Planning, Performance, and Analytics",
           papers: [
-            "• External Financial Reporting Decisions",
-            "• Planning, Budgeting, and Forecasting",
-            "• Performance Management",
-            "• Cost Management",
-            "• Internal Controls",
-            "• Technology and Analytics",
+            "External Financial Reporting Decisions",
+            "Planning, Budgeting, and Forecasting",
+            "Performance Management",
+            "Cost Management",
+            "Internal Controls",
+            "Technology and Analytics",
           ],
         },
         {
           title: "Part 2 – Strategic Financial Management",
           papers: [
-            "• Financial Statement Analysis",
-            "• Corporate Finance",
-            "• Decision Analysis",
-            "• Risk Management",
-            "• Investment Decisions",
-            "• Professional Ethics",
+            "Financial Statement Analysis",
+            "Corporate Finance",
+            "Decision Analysis",
+            "Risk Management",
+            "Investment Decisions",
+            "Professional Ethics",
           ],
         },
         {
           title: "Exam Format",
           papers: [
-            "• 100 Multiple-Choice Questions (MCQs) per part",
-            "• 2 Essay Questions (case-based) per part",
+            "100 Multiple-Choice Questions (MCQs) per part",
+            "2 Essay Questions (case-based) per part",
             "🕒 Total Duration: 4 hours (3 hours MCQs + 1 hour essay)",
           ],
         },
       ],
     },
 
-    // SECTION 4
     {
       heading: "Eligibility Requirements",
       subjects: [
         {
           title: "Education",
           papers: [
-            "• A Bachelor's degree in any discipline from an accredited university.",
+            "A Bachelor's degree in any discipline from an accredited university.",
           ],
         },
         {
           title: "Experience",
           papers: [
-            "• 2 years of relevant work experience in management accounting or financial management.",
-            "• Experience can be completed before or within 7 years after passing the exam.",
+            "2 years of relevant work experience in management accounting or financial management.",
+            "Experience can be completed before or within 7 years after passing the exam.",
           ],
         },
         {
           title: "Membership",
           papers: [
-            "• Active IMA (Institute of Management Accountants) membership is required.",
+            "Active IMA (Institute of Management Accountants) membership is required.",
           ],
         },
       ],
     },
 
-    // SECTION 5
     {
       heading: "CMA (USA) Fee Structure (Approx.)",
       subjects: [
@@ -115,7 +110,6 @@ const cmaCourse = {
       ],
     },
 
-    // SECTION 6
     {
       heading: "Exam Windows",
       content: [
@@ -125,38 +119,37 @@ const cmaCourse = {
         {
           title: "Windows",
           papers: [
-            "• January – February",
-            "• May – June",
-            "• September – October",
+            "January – February",
+            "May – June",
+            "September – October",
           ],
         },
       ],
     },
 
-    // SECTION 7
     {
       heading: "Career Opportunities",
       subjects: [
         {
           title: "Common Job Roles",
           papers: [
-            "• Financial Analyst",
-            "• Cost Accountant",
-            "• Management Accountant",
-            "• Finance Manager",
-            "• Budget Analyst",
-            "• Controller / CFO (senior level)",
+            "Financial Analyst",
+            "Cost Accountant",
+            "Management Accountant",
+            "Finance Manager",
+            "Budget Analyst",
+            "Controller / CFO (senior level)",
           ],
         },
         {
           title: "Top Employers",
           papers: [
-            "• Deloitte, EY, PwC, KPMG",
-            "• Accenture, IBM, Amazon",
-            "• Coca-Cola, Johnson & Johnson",
-            "• Multinational Corporations (MNCs)",
-            "• Banks & Financial Institutions",
-            "• Manufacturing, FMCG, Tech Companies",
+            "Deloitte, EY, PwC, KPMG",
+            "Accenture, IBM, Amazon",
+            "Coca-Cola, Johnson & Johnson",
+            "Multinational Corporations (MNCs)",
+            "Banks & Financial Institutions",
+            "Manufacturing, FMCG, Tech Companies",
           ],
         },
       ],

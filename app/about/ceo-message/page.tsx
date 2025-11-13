@@ -7,13 +7,12 @@ import Image from "next/image";
 const CeoMessage = () => {
   return (
     <main className="overflow-x-hidden bg-background text-foreground">
-      {/* 🌟 Updated Hero */}
       <Hero
         title="CEO's Message"
         highlight="From the Desk of the CEO"
         description="A vision built on integrity, excellence, and a deep commitment to nurturing future leaders in finance and accountancy."
         breadcrumb="Home » About » CEO's Message"
-        backgroundImage="/assets/about/ceo-bg.jpg"
+        backgroundImage="/assets/events/Building1.jpg"
       />
 
       <section className="container mx-auto px-4 lg:px-0 pt-12 pb-20">

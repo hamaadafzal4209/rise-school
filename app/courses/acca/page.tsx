@@ -133,7 +133,8 @@ export default function ACCAPage() {
               {accaCourse.title}
             </h2>
             <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-              A complete professional pathway for aspiring accountants and finance professionals around the world.
+              A complete professional pathway for aspiring accountants and
+              finance professionals around the world.
             </p>
           </div>
 
@@ -166,8 +167,14 @@ export default function ACCAPage() {
                   {section.list && (
                     <ul className="grid sm:grid-cols-2 gap-3 mt-5">
                       {section.list.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-gray-700 leading-snug">
-                          <CheckCircle className="text-green-500 mt-1 shrink-0" size={18} />
+                        <li
+                          key={i}
+                          className="flex items-start gap-2 text-gray-700 leading-snug"
+                        >
+                          <CheckCircle
+                            className="text-green-500 mt-1 shrink-0"
+                            size={18}
+                          />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -197,29 +204,36 @@ export default function ACCAPage() {
         </div>
       </section>
 
-<section className="pb-20 pt-8 bg-linear-to-r from-blue-50 via-cyan-50 to-teal-50">
-  <div className="container mx-auto px-6 lg:px-12 text-center">
-    <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-primary">
-      Why Choose <span className="text-gradient bg-clip-text">RISE Premier</span> for ACCA
-    </h2>
-    <p className="text-gray-700 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed mb-8">
-      RISE Premier: Your Gateway to a Global ACCA Career
-    </p>
+      <section className="pb-20 pt-8 bg-linear-to-r from-blue-50 via-cyan-50 to-teal-50">
+        <div className="container mx-auto px-6 lg:px-12 text-center">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-primary">
+            Why Choose{" "}
+            <span className="text-gradient bg-clip-text">RISE Premier</span> for
+            ACCA
+          </h2>
+          <p className="text-gray-700 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed mb-8">
+            RISE Premier: Your Gateway to a Global ACCA Career
+          </p>
 
-    <div className="max-w-4xl mx-auto space-y-6 text-gray-700 text-base sm:text-lg leading-relaxed">
-      <p>
-        Join one of the best ACCA colleges in Lahore and unlock international opportunities in accounting, finance, and business.
-      </p>
-      <p>
-        At RISE Premier School of Accountancy, we combine world-class teaching, modern technology, and personal mentorship to make your ACCA journey successful and rewarding.
-      </p>
-      <p>
-        With top-tier faculty, structured coaching, and global career support, RISE Premier stands out as one of the best ACCA institutes in Lahore and Pakistan — where your dream of becoming an internationally recognized finance professional matures.
-      </p>
-    </div>
-  </div>
-</section>
-
+          <div className="max-w-4xl mx-auto space-y-6 text-gray-700 text-base sm:text-lg leading-relaxed">
+            <p>
+              Join one of the best ACCA colleges in Lahore and unlock
+              international opportunities in accounting, finance, and business.
+            </p>
+            <p>
+              At RISE Premier School of Accountancy, we combine world-class
+              teaching, modern technology, and personal mentorship to make your
+              ACCA journey successful and rewarding.
+            </p>
+            <p>
+              With top-tier faculty, structured coaching, and global career
+              support, RISE Premier stands out as one of the best ACCA
+              institutes in Lahore and Pakistan — where your dream of becoming
+              an internationally recognized finance professional matures.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

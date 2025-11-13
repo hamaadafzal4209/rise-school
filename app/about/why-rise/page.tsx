@@ -67,7 +67,7 @@ const WhyRisePage = () => {
         highlight="RISE Premier"
         description="Your Gateway to a Successful Accounting Career — where expert teaching meets proven success and nationwide opportunity."
         breadcrumb="Home » About » Why RISE Premier"
-        backgroundImage="/assets/about/why-rise-bg.jpg"
+        backgroundImage="/assets/events/Building1.jpg"
       />
 
       <section className="container mx-auto px-4 lg:px-0 pt-12 pb-20">
