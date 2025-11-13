@@ -161,6 +161,14 @@ const FacultyPage = () => {
       ],
       image: "/assets/faculty/SirTahirAziz.jpg",
     },
+    {
+      name: "Farhan Chaudhry",
+      qualification: "M.Phil. Applied Linguistics",
+      details: [
+        "M.Phil. Applied Linguistics"
+      ],
+      image: "/assets/faculty/FarhanChaudhry.jpg",
+    },
   ];
 
   return (
