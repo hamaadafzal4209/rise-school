@@ -5,33 +5,37 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Hero from "@/components/common/Hero";
 
+// Updated categories with filtered images and merged Study + Building
 const eventCategories = [
   {
     title: "Prize Distribution",
     folder: "Prize",
-    count: 11,
+    images: [1, 5, 7], // Only show these images
   },
   {
     title: "Naran Trip",
     folder: "Trip",
-    count: 12,
+    images: [2, 4, 8, 9, 10, 12], // Only show these images
   },
   {
-    title: "Rise Study",
-    folder: "Study",
-    count: 6,
-  },
-  {
-    title: "Rise Building",
-    folder: "Building",
-    count: 13,
+    title: "RISE Premier Campus", // Merged heading
+    folder: "MergedStudyBuilding",
+    images: [
+      // Study images 1,2,3
+      { folder: "Study", index: 1 },
+      { folder: "Study", index: 2 },
+      { folder: "Study", index: 3 },
+      // Building images 2,3,5
+      { folder: "Building", index: 2 },
+      { folder: "Building", index: 3 },
+      { folder: "Building", index: 5 },
+    ],
   },
 ];
 
-
 const EventGallery = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentCategory, setCurrentCategory] = useState<string | null>(null);
+  const [currentCategory, setCurrentCategory] = useState<any>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -43,9 +47,9 @@ const EventGallery = () => {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  });
+  }, [isModalOpen]);
 
-  const openModal = (category: string, index: number) => {
+  const openModal = (category: any, index: number) => {
     setCurrentCategory(category);
     setCurrentIndex(index);
     setIsModalOpen(true);
@@ -54,24 +58,25 @@ const EventGallery = () => {
   const closeModal = () => setIsModalOpen(false);
 
   const nextImage = () => {
-    const category = eventCategories.find((c) => c.folder === currentCategory);
-    if (category) {
-      setCurrentIndex((prev) => (prev + 1) % category.count);
-    }
+    if (!currentCategory) return;
+    setCurrentIndex((prev) => (prev + 1) % currentCategory.images.length);
   };
 
   const prevImage = () => {
-    const category = eventCategories.find((c) => c.folder === currentCategory);
-    if (category) {
-      setCurrentIndex((prev) =>
-        prev === 0 ? category.count - 1 : prev - 1
-      );
-    }
+    if (!currentCategory) return;
+    setCurrentIndex((prev) =>
+      prev === 0 ? currentCategory.images.length - 1 : prev - 1
+    );
   };
 
-  const currentImagePath = currentCategory
-    ? `/assets/events/${currentCategory}${currentIndex + 1}.jpg`
-    : "";
+  const getImagePath = (category: any, idx: number) => {
+    // For merged category
+    if (category.folder === "MergedStudyBuilding") {
+      const img = category.images[idx];
+      return `/assets/events/${img.folder}${img.index}.jpg`;
+    }
+    return `/assets/events/${category.folder}${category.images[idx]}.jpg`;
+  };
 
   return (
     <div>
@@ -85,12 +90,12 @@ const EventGallery = () => {
 
       <section className="py-16 bg-background">
         <div className="container mx-auto px-6 space-y-20">
-          {eventCategories.map((category, index) => (
+          {eventCategories.map((category, idx) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: idx * 0.2 }}
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8 text-center text-foreground">
@@ -98,16 +103,19 @@ const EventGallery = () => {
               </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {Array.from({ length: category.count }).map((_, i) => {
-                  const imagePath = `/assets/events/${category.folder}${i + 1}.jpg`;
-                  console.log(imagePath)
+                {category.images.map((img: any, i: number) => {
+                  const imagePath =
+                    category.folder === "MergedStudyBuilding"
+                      ? `/assets/events/${img.folder}${img.index}.jpg`
+                      : `/assets/events/${category.folder}${img}.jpg`;
+
                   return (
                     <motion.div
                       key={imagePath}
                       className="relative group overflow-hidden rounded-xl shadow-sm cursor-pointer"
                       whileHover={{ scale: 1.03 }}
                       transition={{ duration: 0.3 }}
-                      onClick={() => openModal(category.folder, i)}
+                      onClick={() => openModal(category, i)}
                     >
                       <img
                         src={imagePath}
@@ -130,7 +138,7 @@ const EventGallery = () => {
       </section>
 
       <AnimatePresence>
-        {isModalOpen && (
+        {isModalOpen && currentCategory && (
           <motion.div
             className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
             initial={{ opacity: 0 }}
@@ -153,7 +161,7 @@ const EventGallery = () => {
               </button>
 
               <img
-                src={currentImagePath}
+                src={getImagePath(currentCategory, currentIndex)}
                 alt="Event"
                 className="w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
               />

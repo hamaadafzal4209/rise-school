@@ -36,7 +36,7 @@ const AboutPage = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-large">
                 <Image
-                  src="/assets/about.png"
+                  src="/assets/about.jpg"
                   alt="Modern school building"
                   width={600}
                   height={500}

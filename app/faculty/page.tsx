@@ -165,6 +165,7 @@ const FacultyPage = () => {
       name: "Farhan Chaudhry",
       qualification: "M.Phil. Applied Linguistics",
       details: [
+        "9 Years Teaching Experience",
         "M.Phil. Applied Linguistics"
       ],
       image: "/assets/faculty/FarhanChaudhry.jpg",

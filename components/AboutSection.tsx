@@ -29,7 +29,6 @@ const AboutSection = () => {
     >
       <div className="container mx-auto px-4 pb-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -38,7 +37,7 @@ const AboutSection = () => {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-large">
               <Image
-                src={"/assets/about.png"}
+                src={"/assets/about.jpg"}
                 alt="Modern school building"
                 className="w-full h-[500px] object-cover"
                 width={500}
@@ -48,14 +47,12 @@ const AboutSection = () => {
             </div>
           </motion.div>
 
-          {/* Right Content */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            {/* Heading */}
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -65,7 +62,6 @@ const AboutSection = () => {
               Why Students Choose RISE Premier
             </motion.h2>
 
-            {/* Mapped Feature List */}
             <motion.ul
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
