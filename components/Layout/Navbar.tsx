@@ -141,9 +141,11 @@ const Navbar = () => {
               );
             })}
 
-            <Button className="ml-4 gradient-primary shadow-medium">
-              Enroll Now
-            </Button>
+            <Link href="/enroll">
+              <Button className="ml-4 gradient-primary shadow-medium">
+                Enroll Now
+              </Button>
+            </Link>
           </div>
 
           <button
@@ -238,9 +240,11 @@ const Navbar = () => {
                 })}
 
                 <div className="px-6 pt-2">
-                  <Button className="w-full gradient-primary shadow-medium">
-                    Enroll Now
-                  </Button>
+                  <Link href="/enroll">
+                    <Button className="w-full gradient-primary shadow-medium">
+                      Enroll Now
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </motion.div>

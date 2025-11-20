@@ -4,8 +4,8 @@ import CampusLife from "@/components/CampusLife";
 import EventGallery from "@/components/EventGallery";
 import FacultySection from "@/components/FacultySection";
 import Hero from "@/components/Hero";
+import HistoryOfAchievements from "@/components/HistoryOfAchievements";
 import TestimonialSlider from "@/components/Testimonial";
-import WhyChooseUs from "@/components/WhyChooseUs";
 
 const page = () => {
   return (
@@ -14,7 +14,7 @@ const page = () => {
       <CampusFacilities />
       <AboutSection />
       <FacultySection />
-      <WhyChooseUs />
+      <HistoryOfAchievements />
       <CampusLife />
       <EventGallery />
       <TestimonialSlider />

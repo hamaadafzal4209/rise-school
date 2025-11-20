@@ -69,13 +69,15 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <motion.div whileTap={{ scale: 0.95 }}>
-            <Button
-              size="lg"
-              className="bg-white text-black hover:bg-[#092f6e] hover:text-white transition-all shadow-lg font-semibold group"
-            >
-              Enroll Now
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link href={"/enroll"}>
+              <Button
+                size="lg"
+                className="bg-white text-black hover:bg-[#092f6e] hover:text-white transition-all shadow-lg font-semibold group"
+              >
+                Enroll Now
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </motion.div>
 
           <motion.div whileTap={{ scale: 0.95 }}>
