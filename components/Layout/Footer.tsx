@@ -27,7 +27,6 @@ const Footer = () => {
 
   const quickLinks = [
     { name: "Home", href: "/" },
-    { name: "Campus Life", href: "/about" },
     { name: "Faculty", href: "/faculty" },
     { name: "Events", href: "/events" },
     { name: "Contact", href: "/contact" },
@@ -130,7 +129,9 @@ const Footer = () => {
 
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-white/70" />
-                  <span>info@risepremier.pk</span>
+                  <a href="mailto:info@risepremier.edu.pk">
+                    info@risepremier.edu.pk
+                  </a>
                 </div>
               </div>
             </motion.div>

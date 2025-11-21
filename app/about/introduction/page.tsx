@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import FeatureCard from "@/components/common/FeatureCard";
 import Hero from "@/components/common/Hero";
+import AboutSection from "@/components/AboutSection";
 
 const AboutPage = () => {
   const ref = useRef(null);
@@ -25,7 +26,7 @@ const AboutPage = () => {
         backgroundImage="/assets/events/Building1.jpg"
       />
 
-      <section ref={ref} className="py-20 bg-gradient-subtle">
+      {/* <section ref={ref} className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -102,9 +103,11 @@ const AboutPage = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+      <AboutSection />
+
+      <div className="container mx-auto px-6 pt-8 lg:px-12 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 mb-20">
           <FeatureCard
             icon={Telescope}
