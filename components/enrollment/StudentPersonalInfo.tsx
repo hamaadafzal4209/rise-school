@@ -53,6 +53,7 @@ const StudentPersonalInfo = () => {
     caf07Normal: "",
     caf08Normal: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (key: string, value: any) => {
     setFormData((prev: any) => ({ ...prev, [key]: value }));
@@ -90,9 +91,37 @@ const StudentPersonalInfo = () => {
     ];
     return keys.reduce((sum, key) => sum + getFee(formData[key]), 0);
   }, [formData]);
+  
+  const handleSubmit = async () => {
+    setIsLoading(true);
+    try {
+      const data = new FormData();
 
-  const handleSubmit = () => {
-    console.log("FormData:", formData);
+      Object.keys(formData).forEach((key) => {
+        data.append(key, formData[key]);
+      });
+
+      data.append("totalFee", totalFee.toString());
+
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        body: data,
+      });
+
+      const result = await res.json();
+      console.log(result);
+      
+      if (result.success) {
+        alert("Registration submitted successfully!");
+      } else {
+        alert("Failed to submit registration. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("An error occurred. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -594,8 +623,12 @@ const StudentPersonalInfo = () => {
         />
       </div>
 
-      <Button className="w-full py-6 text-lg mt-6" onClick={handleSubmit}>
-        Submit
+      <Button 
+        className="w-full py-6 text-lg mt-6" 
+        onClick={handleSubmit}
+        disabled={isLoading}
+      >
+        {isLoading ? "Submitting..." : "Submit"}
       </Button>
     </div>
   );
