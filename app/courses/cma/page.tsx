@@ -118,11 +118,7 @@ const cmaCourse = {
       subjects: [
         {
           title: "Windows",
-          papers: [
-            "January – February",
-            "May – June",
-            "September – October",
-          ],
+          papers: ["January – February", "May – June", "September – October"],
         },
       ],
     },
@@ -167,7 +163,7 @@ export default function CMAPage() {
         highlight="Certified Management Accountant (USA)"
         description="Become a globally recognized financial strategist through the CMA (USA) qualification — highly valued in management accounting, finance, and corporate decision-making roles."
         breadcrumb="Home » Courses » CMA"
-        backgroundImage="/assets/course-banner.jpeg"
+        backgroundImage="/assets/courses/CMA.png"
       />
 
       <section className="py-20 bg-gray-50">
@@ -177,7 +173,10 @@ export default function CMAPage() {
               {cmaCourse.title}
             </h2>
             <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-              A globally respected certification for aspiring financial analysts, management accountants, and strategic finance professionals — offered by the Institute of Management Accountants (IMA), USA.
+              A globally respected certification for aspiring financial
+              analysts, management accountants, and strategic finance
+              professionals — offered by the Institute of Management Accountants
+              (IMA), USA.
             </p>
           </div>
 

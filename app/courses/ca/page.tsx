@@ -122,7 +122,7 @@ const CoursesPage = () => {
         highlight="Chartered Accountancy"
         description="The Chartered Accountancy (CA) qualification is one of the most respected professional designations in finance, equipping students with world-class expertise in accounting, auditing, taxation, and financial management."
         breadcrumb="Home » Courses » CA"
-        backgroundImage="/assets/course-banner.jpeg"
+        backgroundImage="/assets/courses/CA.png"
       />
 
       <section className="py-20 bg-gray-50">

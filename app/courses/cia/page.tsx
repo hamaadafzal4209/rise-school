@@ -97,9 +97,7 @@ const ciaCourse = {
         },
         {
           title: "Membership",
-          papers: [
-            "IIA membership (required to register for the CIA exams).",
-          ],
+          papers: ["IIA membership (required to register for the CIA exams)."],
         },
       ],
     },
@@ -163,7 +161,7 @@ export default function CIAPage() {
         highlight="Certified Internal Auditor"
         description="Become a globally recognized internal audit expert with the Certified Internal Auditor (CIA) qualification — your gateway to a successful career in governance, risk, and control."
         breadcrumb="Home » Courses » CIA"
-        backgroundImage="/assets/course-banner.jpeg"
+        backgroundImage="/assets/courses/CIA.png"
       />
 
       <section className="py-20 bg-gray-50">
@@ -173,7 +171,9 @@ export default function CIAPage() {
               {ciaCourse.title}
             </h2>
             <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-              The globally respected certification for internal auditors, risk managers, and compliance professionals — offered by the Institute of Internal Auditors (IIA), USA.
+              The globally respected certification for internal auditors, risk
+              managers, and compliance professionals — offered by the Institute
+              of Internal Auditors (IIA), USA.
             </p>
           </div>
 

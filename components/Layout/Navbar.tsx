@@ -14,6 +14,7 @@ import {
   Phone,
   ChevronDown,
   CalendarHeartIcon,
+  Laptop,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -46,6 +47,14 @@ const Navbar = () => {
       ],
     },
     { name: "Events", href: "/events", icon: CalendarHeartIcon },
+    {
+      name: "Portal",
+      icon: Laptop,
+      subLinks: [
+        { name: "LMS", href: "https://rise.learninghub.pk/login/index.php" },
+        { name: "RTS", href: "https://rts.learninghub.pk/login/index.php" },
+      ],
+    },
     { name: "Contact", href: "/contact", icon: Phone },
   ];
 
@@ -67,7 +76,7 @@ const Navbar = () => {
             </Link>
           </motion.div>
 
-          <div className="hidden md:flex items-center space-x-1 relative">
+          <div className="hidden lg:flex items-center space-x-1 relative">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               const hasDropdown = item.subLinks;
@@ -124,15 +133,27 @@ const Navbar = () => {
                           transition={{ duration: 0.2 }}
                           className="absolute left-0 mt-2 w-44 bg-white shadow-lg rounded-lg border border-gray-100 z-50"
                         >
-                          {item.subLinks.map((sub) => (
-                            <Link
-                              key={sub.name}
-                              href={sub.href}
-                              className="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors"
-                            >
-                              {sub.name}
-                            </Link>
-                          ))}
+                          {item.subLinks.map((sub) =>
+                            item.name === "Portal" ? (
+                              <a
+                                key={sub.name}
+                                href={sub.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors"
+                              >
+                                {sub.name}
+                              </a>
+                            ) : (
+                              <Link
+                                key={sub.name}
+                                href={sub.href}
+                                className="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors"
+                              >
+                                {sub.name}
+                              </Link>
+                            )
+                          )}
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -150,7 +171,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg cursor-pointer gradient-primary transition-colors"
+            className="lg:hidden p-2 rounded-lg cursor-pointer gradient-primary transition-colors"
           >
             {isOpen ? (
               <X className="w-6 h-6 text-white" />
@@ -222,17 +243,31 @@ const Navbar = () => {
                           transition={{ duration: 0.3 }}
                           className="pl-12 pr-6 pb-2 space-y-1"
                         >
-                          {item.subLinks.map((sub) => (
-                            <Link
-                              key={sub.name}
-                              href={sub.href}
-                              onClick={() => setIsOpen(false)}
-                            >
-                              <div className="py-2 text-sm text-gray-700 hover:text-primary transition-colors">
-                                {sub.name}
-                              </div>
-                            </Link>
-                          ))}
+                          {item.subLinks.map((sub) =>
+                            item.name === "Portal" ? (
+                              <a
+                                key={sub.name}
+                                href={sub.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                <div className="py-2 text-sm text-gray-700 hover:text-primary transition-colors">
+                                  {sub.name}
+                                </div>
+                              </a>
+                            ) : (
+                              <Link
+                                key={sub.name}
+                                href={sub.href}
+                                onClick={() => setIsOpen(false)}
+                              >
+                                <div className="py-2 text-sm text-gray-700 hover:text-primary transition-colors">
+                                  {sub.name}
+                                </div>
+                              </Link>
+                            )
+                          )}
                         </motion.div>
                       )}
                     </div>

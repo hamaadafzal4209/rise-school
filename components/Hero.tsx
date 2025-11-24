@@ -11,7 +11,7 @@ const Hero = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url(/assets/events/Building1.jpg)",
+          backgroundImage: "url(/assets/hero.jpg)",
         }}
       />
 
@@ -19,7 +19,7 @@ const Hero = () => {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(120deg, rgba(0,0,0,0.85) 25%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.9) 100%)",
+            "linear-gradient(120deg, rgba(0,0,0,0.5) 25%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.5) 100%)",
         }}
       />
 
@@ -68,7 +68,7 @@ const Hero = () => {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <motion.div whileTap={{ scale: 0.95 }}>
+          {/* <motion.div whileTap={{ scale: 0.95 }}>
             <Link href={"/enroll"}>
               <Button
                 size="lg"
@@ -78,10 +78,10 @@ const Hero = () => {
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div whileTap={{ scale: 0.95 }}>
-            <Link href="/about" passHref>
+            <Link href="/about/introduction" passHref>
               <Button
                 size="lg"
                 variant="outline"

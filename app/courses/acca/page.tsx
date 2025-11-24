@@ -123,7 +123,7 @@ export default function ACCAPage() {
         highlight="Association of Chartered Certified Accountants"
         description="Become a globally recognized accounting professional with ACCA — the world’s leading qualification for future-ready finance experts."
         breadcrumb="Home » Courses » ACCA"
-        backgroundImage="/assets/course-banner.jpeg"
+        backgroundImage="/assets/courses/ACCA.png"
       />
 
       <section className="pt-20 bg-gray-50">
