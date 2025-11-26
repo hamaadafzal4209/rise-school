@@ -23,10 +23,11 @@ const AboutPage = () => {
         highlight="RISE Premier"
         description="Where brilliance meets purpose. Empowering the next generation with wisdom, integrity, and a spirit of excellence."
         breadcrumb="Home » About"
-        backgroundImage="/assets/events/Building1.jpg"
+        backgroundImage="/assets/hero.jpg"
+        backgroundStyles={{ position: 'top' }}
       />
 
-      {/* <section ref={ref} className="py-20 bg-gradient-subtle">
+      <section ref={ref} className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -41,7 +42,7 @@ const AboutPage = () => {
                   alt="Modern school building"
                   width={600}
                   height={500}
-                  className="w-full h-[500px] object-cover"
+                  className="w-full h-[460px] object-cover"
                 />
                 <div className="absolute inset-0 bg-linear-to-tr from-primary/30 to-transparent" />
               </div>
@@ -51,17 +52,10 @@ const AboutPage = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-6"
             >
-              <div>
-                <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-                  About RISE Premier
-                </div>
-
-                <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6 leading-tight">
-                  Who We Are
-                </h2>
-              </div>
+              <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6 leading-tight">
+                Who We Are
+              </h2>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -103,9 +97,9 @@ const AboutPage = () => {
             </motion.div>
           </div>
         </div>
-      </section> */}
+      </section>
 
-      <AboutSection />
+      {/* <AboutSection /> */}
 
       <div className="container mx-auto px-6 pt-8 lg:px-12 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 mb-20">

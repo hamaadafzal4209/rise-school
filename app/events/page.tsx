@@ -83,7 +83,7 @@ const EventGallery = () => {
       <Hero
         title="Our Memorable"
         highlight="Events"
-        description="Explore unforgettable moments from our academic, recreational, and cultural events — where learning meets celebration."
+        description="Explore unforgettable moments from our academic, recreational, and cultural events"
         breadcrumb="Home » Event Gallery"
         backgroundImage="/assets/events/Prize5.jpg"
       />

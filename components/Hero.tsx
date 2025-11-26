@@ -15,14 +15,7 @@ const Hero = () => {
         }}
       />
 
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(120deg, rgba(0,0,0,0.5) 25%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.5) 100%)",
-        }}
-      />
-
+      <div className="absolute inset-0 bg-linear-to-r from-black/60 via-black/30 to-transparent" />
       <div
         className="absolute inset-0 opacity-[0.08]"
         style={{
@@ -33,7 +26,7 @@ const Hero = () => {
       />
 
       {/* Text content */}
-      <div className="relative z-10 container mx-auto px-6 text-white text-center">
+      <div className="relative z-10 container px-6 text-white text-left">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -56,7 +49,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-lg md:text-xl mb-8 text-gray-200/90 max-w-2xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl mb-8 text-gray-200/90 max-w-2xl leading-relaxed"
         >
           Join our community of learners and discover your potential in a
           nurturing academic environment.
@@ -66,7 +59,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-4"
         >
           {/* <motion.div whileTap={{ scale: 0.95 }}>
             <Link href={"/enroll"}>

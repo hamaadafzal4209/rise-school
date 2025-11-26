@@ -160,8 +160,8 @@ export default function CMAPage() {
     <main className="bg-white text-gray-900">
       <Hero
         title="CMA Qualification"
-        highlight="Certified Management Accountant (USA)"
-        description="Become a globally recognized financial strategist through the CMA (USA) qualification — highly valued in management accounting, finance, and corporate decision-making roles."
+        // highlight="Certified Management Accountant (USA)"
+        description="Become a globally recognized financial strategist — highly valued in management accounting, finance and corporate decision-making roles."
         breadcrumb="Home » Courses » CMA"
         backgroundImage="/assets/courses/CMA.png"
       />

@@ -50,7 +50,7 @@ const HistoryOfAchievements = () => {
         <motion.img
           src="/assets/achievements/wallofachievement.jpg"
           alt="Wall of Achievements"
-          className="w-full rounded-xl shadow-lg object-cover max-h-[550px]"
+          className="w-full max-w-xl mx-auto rounded-xl shadow-lg object-cover max-h-[550px]"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -64,9 +64,9 @@ const HistoryOfAchievements = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-heading font-bold text-foreground"
+          className="text-4xl md:text-5xl font-heading font-bold text-foreground"
         >
-          Achievements
+          Success Stories
         </motion.h3>
       </div>
 

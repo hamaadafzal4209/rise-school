@@ -79,7 +79,7 @@ const Hero = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-md"
+            className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-lg"
           >
             {description}
           </motion.p>

@@ -15,7 +15,7 @@ const page = () => {
       <AboutSection />
       <FacultySection />
       <HistoryOfAchievements />
-      <CampusLife />
+      {/* <CampusLife /> */}
       <EventGallery />
       <TestimonialSlider />
     </div>

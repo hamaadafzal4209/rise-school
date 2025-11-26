@@ -9,10 +9,11 @@ const CeoMessage = () => {
     <main className="overflow-x-hidden bg-background text-foreground">
       <Hero
         title="CEO's Message"
-        highlight="From the Desk of the CEO"
+        // highlight="From the Desk of the CEO"
         description="A vision built on integrity, excellence, and a deep commitment to nurturing future leaders in finance and accountancy."
         breadcrumb="Home » About » CEO's Message"
-        backgroundImage="/assets/events/Building1.jpg"
+        backgroundImage="/assets/hero.jpg"
+          backgroundStyles={{ position: 'top' }}
       />
 
       <section className="container mx-auto px-4 lg:px-0 pt-12 pb-20">
@@ -24,7 +25,7 @@ const CeoMessage = () => {
           className="flex flex-col md:flex-row items-center gap-12"
         >
           <div className="w-full lg:w-1/2 space-y-5 text-muted-foreground leading-relaxed text-justify">
-            <h3 className="text-3xl font-bold text-primary mb-4 text-center md:text-left">
+            <h3 className="text-3xl font-bold text-primary mb-4 text-left">
               CEO&apos;s Message
             </h3>
 
@@ -62,7 +63,7 @@ const CeoMessage = () => {
               </p>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 flex justify-center">
+          <div className="w-full lg:w-1/2 max-h-[500px] flex justify-center">
             <Image
               src="/assets/ceomessage.jpg"
               alt="CEO of RISE Premier"

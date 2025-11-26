@@ -12,15 +12,15 @@ const EventGallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const imagePaths = [
-    "/assets/events/Prize1.jpg",
-    "/assets/events/Building11.jpg",
-    "/assets/events/Trip2.jpg",
-    "/assets/events/Prize7.jpg",
-    "/assets/events/Study3.jpg",
-    "/assets/events/Building12.jpg",
-    "/assets/events/Building13.jpg",
+    "/assets/events/Prize5.jpg",
+    // "/assets/events/Building11.jpg",
+    "/assets/events/Trip4.jpg",
     "/assets/events/Trip9.jpg",
-    "/assets/events/Building8.jpg",
+    // "/assets/events/Prize7.jpg",
+    // "/assets/events/Study3.jpg",
+    // "/assets/events/Building12.jpg",
+    // "/assets/events/Building13.jpg",
+    // "/assets/events/Building8.jpg",
   ];
 
   const containerVariants = {

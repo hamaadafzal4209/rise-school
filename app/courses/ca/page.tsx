@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle, BookOpen, Layers, ArrowRightCircle } from "lucide-react";
 import Hero from "@/components/common/Hero";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const caCourse = {
   id: "ca",
@@ -21,14 +22,38 @@ const caCourse = {
     {
       heading: "Benefits of CA",
       list: [
-        "Prestige & Recognition: Highly respected professional qualification, valued in Pakistan and abroad.",
-        "Career Opportunities: Work in audit, finance, banking, taxation, or corporate leadership.",
-        "High Income Potential: Excellent salary packages and strong career growth.",
-        "Global Mobility: Recognized internationally through ICAP’s global partnerships.",
-        "Job Security: Constant demand for financial and accounting experts.",
-        "Leadership & Entrepreneurship: Opens doors to becoming a CFO, CEO, or business owner.",
-        "Professional Development: Continuous learning and skill enhancement through ICAP.",
-        "Contribution to Economy: CAs strengthen transparency, governance, and financial systems.",
+        {
+          label: "Prestige & Recognition",
+          text: "Highly respected professional qualification, valued in Pakistan and abroad.",
+        },
+        {
+          label: "Career Opportunities",
+          text: "Work in audit, finance, banking, taxation, or corporate leadership.",
+        },
+        {
+          label: "High Income Potential",
+          text: "Excellent salary packages and strong career growth.",
+        },
+        {
+          label: "Global Mobility",
+          text: "Recognized internationally through ICAP's global partnerships.",
+        },
+        {
+          label: "Job Security",
+          text: "Constant demand for financial and accounting experts.",
+        },
+        {
+          label: "Leadership & Entrepreneurship",
+          text: "Opens doors to becoming a CFO, CEO, or business owner.",
+        },
+        {
+          label: "Professional Development",
+          text: "Continuous learning and skill enhancement through ICAP.",
+        },
+        {
+          label: "Contribution to Economy",
+          text: "CAs strengthen transparency, governance, and financial systems.",
+        },
       ],
     },
     {
@@ -48,8 +73,8 @@ const caCourse = {
         {
           title: "Graduate / Degree route",
           papers: [
-            "Bachelor’s degree with 16 years of education from a recognised university → Eligible for registration as trainee.",
-            "Bachelor’s degree (minimum 14 years of education) with aggregate 45% or equivalent and having passed required prior assessments (PRC or AFC) → Eligible for trainee registration.",
+            "Bachelor's degree with 16 years of education from a recognised university → Eligible for registration as trainee.",
+            "Bachelor's degree (minimum 14 years of education) with aggregate 45% or equivalent and having passed required prior assessments (PRC or AFC) → Eligible for trainee registration.",
           ],
         },
         {
@@ -66,9 +91,9 @@ const caCourse = {
         {
           title: "PRC - Pre-Requisite Competencies (3 papers)",
           papers: [
-            "PRC-01: Introduction to Accounting",
-            "PRC-02: Quantitative Methods for Business",
-            "PRC-03: Introduction to Business & Economic Insights",
+            "PRC-01: Fundamentals of Accounting",
+            "PRC-02: Quantitative Analysis for Business",
+            "PRC-03: Business and Economic Insights",
           ],
         },
         {
@@ -92,17 +117,15 @@ const caCourse = {
           papers: [
             "CFAP-01: Advanced Corporate Reporting",
             "CFAP-02: Corporate Laws & Governance",
-            "CFAP-03: Sustainability for Accountants (New)",
+            "CFAP-03: Sustainability Reporting and Assurance",
             "CFAP-04: Strategic Business Finance",
             "CFAP-05: Taxation Practice & Planning",
-            "CFAP-06: Audit, Assurance & Data Management",
+            "CFAP-06: Audit, Assurance & Data",
           ],
         },
         {
-          title: "Strategic Case Study (replaces old MSA papers)",
-          papers: [
-            "One comprehensive case-study assessment in place of the previous two MSA papers.",
-          ],
+          title: "Strategic Case Study",
+          papers: ["One comprehensive case-study assessment"],
         },
       ],
     },
@@ -119,13 +142,13 @@ const CoursesPage = () => {
     <main className="bg-white text-gray-900">
       <Hero
         title="CA Qualification"
-        highlight="Chartered Accountancy"
-        description="The Chartered Accountancy (CA) qualification is one of the most respected professional designations in finance, equipping students with world-class expertise in accounting, auditing, taxation, and financial management."
+        // highlight="Chartered Accountancy"
+        description="The Chartered Accountancy (CA) qualification is one of the most respected professional designations in accounting, auditing, taxation, and financial management."
         breadcrumb="Home » Courses » CA"
         backgroundImage="/assets/courses/CA.png"
       />
 
-      <section className="py-20 bg-gray-50">
+      <section className="pt-20 pb-6 bg-gray-50">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold mb-3 tracking-tight text-gray-900">
@@ -182,7 +205,9 @@ const CoursesPage = () => {
                                   className="text-green-500 mt-1 shrink-0"
                                   size={18}
                                 />
-                                <span>{item}</span>
+                                <span>
+                                  <strong>{item.label}:</strong> {item.text}
+                                </span>
                               </li>
                             ))}
                           </ul>
@@ -236,10 +261,6 @@ const CoursesPage = () => {
                 success. Our faculty members are known for their clear concepts,
                 personalized teaching, and proven exam strategies.
               </p>
-              <p className="mt-2 text-sm text-gray-400">
-                Keywords: best CA teachers in Lahore, experienced CA faculty
-                Pakistan, top CA instructors.
-              </p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
@@ -250,10 +271,6 @@ const CoursesPage = () => {
                 RISE Premier offers comprehensive preparation for all ICAP
                 levels — PRC, CAF, CFAP, and MSA — with updated study resources,
                 mock exams, and continuous mentoring.
-              </p>
-              <p className="mt-2 text-sm text-gray-400">
-                Keywords: CA classes in Pakistan, ICAP course preparation, CA
-                syllabus Lahore.
               </p>
             </div>
 
@@ -267,10 +284,6 @@ const CoursesPage = () => {
                 Pakistan access the same quality education as on-campus
                 learners.
               </p>
-              <p className="mt-2 text-sm text-gray-400">
-                Keywords: online CA in Pakistan, CA classes Lahore online,
-                hybrid CA institute.
-              </p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
@@ -281,10 +294,6 @@ const CoursesPage = () => {
                 RISE Premier’s students consistently secure top ICAP positions
                 and outstanding pass rates. Our results speak louder than words
                 — proving our dedication to quality and performance.
-              </p>
-              <p className="mt-2 text-sm text-gray-400">
-                Keywords: CA results Pakistan, CA toppers Lahore, best CA
-                results institute.
               </p>
             </div>
 
@@ -297,10 +306,6 @@ const CoursesPage = () => {
                 career. RISE Premier offers career counseling, interview
                 preparation, and mentorship for your professional life.
               </p>
-              <p className="mt-2 text-sm text-gray-400">
-                Keywords: CA career in Pakistan, jobs for Chartered Accountants,
-                CA training in Lahore.
-              </p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
@@ -311,10 +316,6 @@ const CoursesPage = () => {
                 With modern campus in Lahore and online programs across
                 Pakistan, RISE Premier ensures accessibility for every aspiring
                 CA student.
-              </p>
-              <p className="mt-2 text-sm text-gray-400">
-                Keywords: CA institute in Lahore, CA academy near me, online CA
-                classes Pakistan.
               </p>
             </div>
           </div>
@@ -332,9 +333,11 @@ const CoursesPage = () => {
                 To help you become a successful Chartered Accountant.
               </strong>
             </p>
-            <Button className="gradient-primary shadow-medium px-8 py-3">
-              Enroll Today
-            </Button>
+            <Link href={"/enroll"}>
+              <Button className="gradient-primary shadow-medium px-8 py-3">
+                Enroll Today
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

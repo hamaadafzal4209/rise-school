@@ -65,9 +65,10 @@ const WhyRisePage = () => {
       <Hero
         title="Why Choose"
         highlight="RISE Premier"
-        description="Your Gateway to a Successful Accounting Career — where expert teaching meets proven success and nationwide opportunity."
+        description="Your Gateway to a Successful Accounting Career "
         breadcrumb="Home » About » Why RISE Premier"
-        backgroundImage="/assets/events/Building1.jpg"
+        backgroundImage="/assets/hero.jpg"
+        backgroundStyles={{ position: "top" }}
       />
 
       <section className="container mx-auto px-4 lg:px-0 pt-12 pb-20">
@@ -94,7 +95,7 @@ const WhyRisePage = () => {
         </motion.div>
       </section>
 
-      <section className="container mx-auto px-4 lg:px-0 pb-24">
+      <section className="container mx-auto px-4 lg:px-0 pb-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {points.map((point, index) => (
             <FeatureCard
@@ -109,22 +110,22 @@ const WhyRisePage = () => {
         </div>
       </section>
 
-      <section className="bg-gradient-subtle py-16">
+      <section className="bg-gradient-subtle pb-16">
         <div className="container mx-auto px-4 lg:px-0 grid lg:grid-cols-2 items-center gap-12">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             <Image
-              src="/assets/events/Building1.jpg"
+              src="/assets/hero.jpg"
               alt="RISE Premier Campus"
               width={600}
               height={400}
               className="rounded-2xl shadow-lg object-cover"
             />
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             initial={{ opacity: 0, x: 40 }}

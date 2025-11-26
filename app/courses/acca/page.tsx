@@ -120,7 +120,7 @@ export default function ACCAPage() {
     <main className="bg-white text-gray-900">
       <Hero
         title="ACCA Qualification"
-        highlight="Association of Chartered Certified Accountants"
+        // highlight="Association of Chartered Certified Accountants"
         description="Become a globally recognized accounting professional with ACCA — the world’s leading qualification for future-ready finance experts."
         breadcrumb="Home » Courses » ACCA"
         backgroundImage="/assets/courses/ACCA.png"

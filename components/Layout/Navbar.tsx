@@ -35,7 +35,6 @@ const Navbar = () => {
         { name: "Why RISE", href: "/about/why-rise" },
       ],
     },
-    { name: "Faculty", href: "/faculty", icon: GraduationCap },
     {
       name: "Courses",
       icon: BookOpen,
@@ -46,6 +45,7 @@ const Navbar = () => {
         { name: "CMA", href: "/courses/cma" },
       ],
     },
+    { name: "Faculty", href: "/faculty", icon: GraduationCap },
     { name: "Events", href: "/events", icon: CalendarHeartIcon },
     {
       name: "Portal",
@@ -93,29 +93,26 @@ const Navbar = () => {
                   {hasDropdown ? (
                     <button
                       type="button"
-                      className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 cursor-pointer ${
-                        isActive
+                      className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 cursor-pointer ${isActive
                           ? "gradient-primary text-white shadow-md"
                           : "text-black hover:text-primary"
-                      }`}
+                        }`}
                     >
                       <item.icon className="w-4 h-4" />
                       <span>{item.name}</span>
                       <ChevronDown
-                        className={`w-4 h-4 ml-1 transition-transform ${
-                          hoveredDropdown === item.name ? "rotate-180" : ""
-                        }`}
+                        className={`w-4 h-4 ml-1 transition-transform ${hoveredDropdown === item.name ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                   ) : (
                     <Link href={item.href}>
                       <motion.div
                         whileHover={{ y: -2 }}
-                        className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 cursor-pointer ${
-                          isActive
+                        className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 cursor-pointer ${isActive
                             ? "gradient-primary text-white shadow-md"
                             : "text-black hover:text-primary"
-                        }`}
+                          }`}
                       >
                         <item.icon className="w-4 h-4" />
                         <span>{item.name}</span>
@@ -204,30 +201,27 @@ const Navbar = () => {
                               openDropdown === item.name ? null : item.name
                             )
                           }
-                          className={`flex items-center justify-between space-x-3 px-6 py-3 mx-4 rounded-lg font-medium cursor-pointer transition-colors ${
-                            isActive
+                          className={`flex items-center justify-between space-x-3 px-6 py-3 mx-4 rounded-lg font-medium cursor-pointer transition-colors ${isActive
                               ? "gradient-primary text-white shadow-md"
                               : "text-foreground hover:text-primary hover:bg-muted/40"
-                          }`}
+                            }`}
                         >
                           <div className="flex items-center space-x-3">
                             <item.icon className="w-5 h-5" />
                             <span>{item.name}</span>
                           </div>
                           <ChevronDown
-                            className={`w-4 h-4 transition-transform ${
-                              openDropdown === item.name ? "rotate-180" : ""
-                            }`}
+                            className={`w-4 h-4 transition-transform ${openDropdown === item.name ? "rotate-180" : ""
+                              }`}
                           />
                         </div>
                       ) : (
                         <Link href={item.href} onClick={() => setIsOpen(false)}>
                           <div
-                            className={`flex items-center space-x-3 px-6 py-3 mx-4 rounded-lg font-medium cursor-pointer transition-colors ${
-                              isActive
+                            className={`flex items-center space-x-3 px-6 py-3 mx-4 rounded-lg font-medium cursor-pointer transition-colors ${isActive
                                 ? "gradient-primary text-white shadow-md"
                                 : "text-foreground hover:text-primary hover:bg-muted/40"
-                            }`}
+                              }`}
                           >
                             <item.icon className="w-5 h-5" />
                             <span>{item.name}</span>

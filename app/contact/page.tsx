@@ -39,39 +39,44 @@ const ContactPage = () => {
     {
       title: "Social Media",
       text: (
-        <div className="flex items-center gap-4 mt-2">
-          <a
-            href="https://www.facebook.com/riseschool.pk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:scale-110 transition-transform"
-          >
-            <FaFacebook className="text-2xl" />
-          </a>
-          <a
-            href="https://www.instagram.com/risepremier"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-pink-600 hover:scale-110 transition-transform"
-          >
-            <FaInstagram className="text-2xl" />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/rise"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-700 hover:scale-110 transition-transform"
-          >
-            <FaLinkedin className="text-2xl" />
-          </a>
-          <a
-            href="https://twitter.com/rise_premier"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sky-500 hover:scale-110 transition-transform"
-          >
-            <FaTwitter className="text-2xl" />
-          </a>
+        <div>
+          <div className="text-gray-700 text-sm leading-relaxed">
+            Contact our social media accounts for upcoming classes and events.
+          </div>
+          <div className="flex items-center gap-4 mt-2">
+            <a
+              href="https://www.facebook.com/riseschool.pk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:scale-110 transition-transform"
+            >
+              <FaFacebook className="text-2xl" />
+            </a>
+            <a
+              href="https://www.instagram.com/risepremier"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-600 hover:scale-110 transition-transform"
+            >
+              <FaInstagram className="text-2xl" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/rise"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-700 hover:scale-110 transition-transform"
+            >
+              <FaLinkedin className="text-2xl" />
+            </a>
+            <a
+              href="https://twitter.com/rise_premier"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-500 hover:scale-110 transition-transform"
+            >
+              <FaTwitter className="text-2xl" />
+            </a>
+          </div>
         </div>
       ),
       gradient: "from-blue-500 to-indigo-500",
@@ -87,10 +92,10 @@ const ContactPage = () => {
       title: "Email",
       text: (
         <a
-          href="mailto:info@risepremier.pk"
+          href="mailto:info@risepremier.edu.pk"
           className="text-primary hover:underline"
         >
-          info@risepremier.pk
+          info@risepremier.edu.pk
         </a>
       ),
       gradient: "from-amber-500 to-orange-500",
@@ -102,7 +107,7 @@ const ContactPage = () => {
       <Hero
         title="Contact"
         highlight="RISE Premier"
-        description="For any information or queries, reach out to us via call, WhatsApp, or social media — we&apos;re here to help you succeed."
+        description="For any information or queries, reach out to us via call, WhatsApp, or social media"
         breadcrumb="Home » Contact"
         backgroundImage="/assets/contact-us.jpg"
       />
@@ -168,6 +173,12 @@ const ContactPage = () => {
               transition={{ duration: 0.7 }}
               className="bg-white p-8 shadow-md rounded-xl border border-gray-100"
             >
+              <div>
+                <p className="font-semibold text-lg text-primary pb-4">
+                  For getting information about new admission, timetables or any
+                  other matters, please contact us.
+                </p>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <Label htmlFor="name" className="text-gray-700">

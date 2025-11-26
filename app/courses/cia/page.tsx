@@ -158,8 +158,8 @@ export default function CIAPage() {
     <main className="bg-white text-gray-900">
       <Hero
         title="CIA Qualification"
-        highlight="Certified Internal Auditor"
-        description="Become a globally recognized internal audit expert with the Certified Internal Auditor (CIA) qualification — your gateway to a successful career in governance, risk, and control."
+        // highlight="Certified Internal Auditor"
+        description="Become a globally recognized internal audit expert with the Certified Internal Auditor — your gateway to a successful career in governance, risk, and control."
         breadcrumb="Home » Courses » CIA"
         backgroundImage="/assets/courses/CIA.png"
       />
